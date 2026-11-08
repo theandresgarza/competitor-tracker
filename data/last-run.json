@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-08T18:22:13Z",
+  "ran_at_utc": "2026-11-08T18:37:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 53
@@ -23,10 +23,10 @@
       "upcoming_sessions": 26
     },
     "othership": {
-      "upcoming_sessions": 468
+      "upcoming_sessions": 464
     },
     "kolm": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "aetherhaus": {
       "upcoming_sessions": 27
@@ -44,13 +44,13 @@
       "upcoming_sessions": 24
     },
     "alter": {
-      "upcoming_sessions": 108
+      "upcoming_sessions": 106
     },
     "nrghaus": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 50
     },
     "sweattonic": {
-      "upcoming_sessions": 234
+      "upcoming_sessions": 232
     },
     "recess": {
       "upcoming_sessions": 37
