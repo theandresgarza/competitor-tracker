@@ -1,0 +1,44 @@
+{
+  "ran_at_utc": "2026-11-08T01:59:45Z",
+  "studios": {
+    "tality": {
+      "upcoming_sessions": 278
+    },
+    "othership": {
+      "upcoming_sessions": 528
+    },
+    "kolm": {
+      "upcoming_sessions": 54
+    },
+    "aetherhaus": {
+      "upcoming_sessions": 30
+    },
+    "tevah": {
+      "upcoming_sessions": 87
+    },
+    "goodsauna": {
+      "upcoming_sessions": 15
+    },
+    "reviva": {
+      "upcoming_sessions": 36
+    },
+    "offline": {
+      "upcoming_sessions": 29
+    },
+    "alter": {
+      "upcoming_sessions": 126
+    },
+    "nrghaus": {
+      "upcoming_sessions": 59
+    },
+    "sweattonic": {
+      "upcoming_sessions": 266
+    },
+    "recess": {
+      "upcoming_sessions": 39
+    },
+    "joy": {
+      "upcoming_sessions": 29
+    }
+  }
+}

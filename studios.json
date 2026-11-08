@@ -1,0 +1,389 @@
+{
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026). track: 'marianatek' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "studios": [
+    {
+      "id": "tality",
+      "name": "Tality Wellness",
+      "city": "Vancouver, North Vancouver, Kitsilano, Kelowna, Squamish, Sherwood Park",
+      "website": "https://www.talitywellness.ca",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": "Every location on its schedule is read: Mount Pleasant, Shipyards, Kitsilano, Kelowna and East Village now; Squamish and Sherwood Park appear once they list sessions. East Village (Calgary) isn't on Tality's website but still has sessions with almost no bookings. Unlimited CA$255/month, 10-pack CA$370."
+    },
+    {
+      "id": "othership",
+      "name": "Othership",
+      "city": "Toronto (Adelaide, Yorkville); also New York",
+      "website": "https://www.othership.us",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "othership",
+      "drop_in_cad": 58,
+      "price_per_visit_cad": [
+        26,
+        38
+      ],
+      "note": "Unlimited CA$244/month. New York locations (Flatiron, Williamsburg) are also read and shown separately."
+    },
+    {
+      "id": "kolm",
+      "name": "Kolm Kontrast",
+      "city": "Vancouver (8th & Cambie)",
+      "website": "https://kolmkontrast.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "kolmkontrast",
+      "drop_in_cad": 55,
+      "price_per_visit_cad": [
+        25,
+        36
+      ],
+      "note": "Unlimited CA$280."
+    },
+    {
+      "id": "aetherhaus",
+      "name": "AetherHaus",
+      "city": "Vancouver (West End, 1768 Davie St)",
+      "website": "https://www.aetherhaus.ca",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "aetherhaus",
+      "drop_in_cad": 56,
+      "price_per_visit_cad": [
+        25,
+        36
+      ],
+      "note": "Daytime CA$39, unlimited CA$275."
+    },
+    {
+      "id": "tevah",
+      "name": "Tevah Wellness",
+      "city": "Vancouver (Yaletown, 955 Pacific Blvd)",
+      "website": "https://www.tevahwellness.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "tevahwellness",
+      "drop_in_cad": 55,
+      "price_per_visit_cad": [
+        25,
+        36
+      ],
+      "note": "Unlimited CA$270."
+    },
+    {
+      "id": "goodsauna",
+      "name": "The Good Sauna",
+      "city": "Vancouver (Strathcona, Container Brewing)",
+      "website": "https://www.thegoodsauna.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "thegoodsauna",
+      "exclude_locations": [
+        "Manchester"
+      ],
+      "drop_in_cad": 45,
+      "price_per_visit_cad": [
+        20,
+        29
+      ],
+      "note": "The Manchester (UK) location is left out."
+    },
+    {
+      "id": "reviva",
+      "name": "Reviva Lounge",
+      "city": "Richmond (4888 Vanguard Rd)",
+      "website": "https://www.revivalounge.ca",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "revivalounge",
+      "drop_in_cad": 25,
+      "price_per_visit_cad": [
+        11,
+        16
+      ],
+      "note": "CA$25 for 75 minutes, unlimited CA$150."
+    },
+    {
+      "id": "offline",
+      "name": "Offline Wellness Club",
+      "city": "Calgary (Beltline)",
+      "website": "https://www.offlinewellnessclub.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "offlinewellnessclub",
+      "drop_in_cad": 45,
+      "price_per_visit_cad": [
+        20,
+        29
+      ],
+      "note": ""
+    },
+    {
+      "id": "alter",
+      "name": "Alter",
+      "city": "Toronto (College West, Leslieville)",
+      "website": "https://www.alterwellness.ca",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "alter",
+      "drop_in_cad": 48,
+      "price_per_visit_cad": [
+        22,
+        31
+      ],
+      "note": "Unlimited CA$300."
+    },
+    {
+      "id": "nrghaus",
+      "name": "NRG Haus",
+      "city": "Toronto (Liberty Village)",
+      "website": "https://nrghaus.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "nrghaus",
+      "drop_in_cad": 45,
+      "price_per_visit_cad": [
+        20,
+        29
+      ],
+      "note": "55-seat sauna, four cold tubs."
+    },
+    {
+      "id": "sweattonic",
+      "name": "Sweat and Tonic",
+      "city": "Toronto (Yonge & Shuter, The Well; Yorkville opens 21 Nov)",
+      "website": "https://sweatandtonic.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "sweatandtonic",
+      "include_types": [
+        "free flow"
+      ],
+      "drop_in_cad": 34,
+      "price_per_visit_cad": [
+        15,
+        22
+      ],
+      "note": "A gym and wellness club: only its Free Flow sauna and cold sessions are counted, not gym classes or spa treatments."
+    },
+    {
+      "id": "recess",
+      "name": "RECESS Thermal Station",
+      "city": "Montreal (Griffintown)",
+      "website": "https://meetatrecess.com",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "recess",
+      "drop_in_cad": 58,
+      "price_per_visit_cad": [
+        26,
+        38
+      ],
+      "note": "Weekday CA$45."
+    },
+    {
+      "id": "joy",
+      "name": "JOY Wellness Club",
+      "city": "Montreal (downtown)",
+      "website": "https://joywellnessclub.ca",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "joywellnessclub",
+      "include_types": [
+        "thermal"
+      ],
+      "drop_in_cad": 59,
+      "price_per_visit_cad": [
+        27,
+        38
+      ],
+      "note": "Only the thermal circuit is counted, not gym classes."
+    },
+    {
+      "id": "gatherwell",
+      "name": "Gatherwell",
+      "city": "North Vancouver (Mosquito Creek Marina), sauna boat; Ambleside from mid-December",
+      "website": "https://www.gatherwell.ca",
+      "platform": "Wix Bookings",
+      "track": "later",
+      "reason": "Wix booking pages show spots left, but only inside the page. Needs a browser-based reader.",
+      "note": "5-pass CA$165 (CA$33 a visit)."
+    },
+    {
+      "id": "habitat",
+      "name": "Habitat Wellness",
+      "city": "Surrey / Langley (4114 186th St)",
+      "website": "https://www.habitat-wellness.com",
+      "platform": "Wix Bookings",
+      "track": "later",
+      "reason": "Wix booking pages show spots left, but only inside the page. Needs a browser-based reader.",
+      "note": "5-pass CA$255."
+    },
+    {
+      "id": "hightide",
+      "name": "High Tide Sauna",
+      "city": "Vancouver (False Creek, sauna boat)",
+      "website": "https://www.hightidesauna.com",
+      "platform": "Wix Bookings",
+      "track": "later",
+      "reason": "Wix booking pages show spots left, but only inside the page. Needs a browser-based reader.",
+      "note": "CA$95 for a 2-hour community session."
+    },
+    {
+      "id": "artofsauna",
+      "name": "Art of Sauna",
+      "city": "Burnaby",
+      "website": "https://artofsauna.ca",
+      "platform": "WellnessLiving",
+      "track": "later",
+      "reason": "WellnessLiving's schedule may show spots left; not checked yet.",
+      "note": "CA$52.50 admission. A multi-sauna spa rather than a social club."
+    },
+    {
+      "id": "prml",
+      "name": "PRML (Rumble)",
+      "city": "Calgary (17th Ave)",
+      "website": "https://prmlsocial.com",
+      "platform": "Mindbody",
+      "track": "later",
+      "reason": "Mindbody only shows spots left if the studio turns it on; not checked yet.",
+      "note": "CA$30 drop-in."
+    },
+    {
+      "id": "revive",
+      "name": "Revive Wellness Club",
+      "city": "Toronto (High Park)",
+      "website": "https://revivewellnessclub.ca",
+      "platform": "Mindbody",
+      "track": "later",
+      "reason": "Mindbody only shows spots left if the studio turns it on; not checked yet.",
+      "note": "CA$49 drop-in, unlimited CA$189."
+    },
+    {
+      "id": "saunoa",
+      "name": "Saunoa",
+      "city": "Toronto (Harbourfront) and Ottawa (River House)",
+      "website": "https://saunoa.ca",
+      "platform": "Periode",
+      "track": "later",
+      "reason": "Opens 13 Nov 2026. Periode's booking page may show spots left; check once open.",
+      "note": "CA$45 for 90 minutes. The Ottawa floating sauna."
+    },
+    {
+      "id": "loyly",
+      "name": "Löyly Floating Sauna",
+      "city": "Kelowna (Toronto barge was seasonal)",
+      "website": "https://www.loylyfloatingsauna.ca",
+      "platform": "Periode",
+      "track": "later",
+      "reason": "Periode's booking page may show spots left; not checked yet.",
+      "note": "CA$45 for 80 minutes."
+    },
+    {
+      "id": "havn",
+      "name": "HAVN Saunas",
+      "city": "Victoria (open); Vancouver Kitsilano mid-2027",
+      "website": "https://www.havnsaunas.com",
+      "platform": "Trybe",
+      "track": "later",
+      "reason": "Trybe's schedule may show spots left; not checked yet.",
+      "note": "Floating barge."
+    },
+    {
+      "id": "floathouse",
+      "name": "Float House",
+      "city": "Vancouver (Gastown), Surrey, Victoria, Langford, Edmonton",
+      "website": "https://floathouse.ca",
+      "platform": "Mindbody",
+      "track": "cannot",
+      "reason": "Private rooms booked by appointment, so there are no shared sessions to count.",
+      "note": "CA$75 for 60 minutes."
+    },
+    {
+      "id": "leela",
+      "name": "Leela Thermal House",
+      "city": "Calgary (Northland)",
+      "website": "https://www.leelathermalhouse.ca",
+      "platform": "Mindbody",
+      "track": "cannot",
+      "reason": "Private suites for 1–2 people, booked by appointment.",
+      "note": ""
+    },
+    {
+      "id": "reset",
+      "name": "Reset Hydrotherapy",
+      "city": "Calgary (inside Evolve Strength Royal Oak)",
+      "website": "https://www.resethydrotherapy.com",
+      "platform": "Wix Pricing Plans",
+      "track": "cannot",
+      "reason": "Private rooms, sold as passes; no shared schedule.",
+      "note": "5 cold sessions CA$79."
+    },
+    {
+      "id": "driftaway",
+      "name": "Drift Away Wellness Spa",
+      "city": "Calgary",
+      "website": "https://driftawaywellness.ca",
+      "platform": "FloatHelm",
+      "track": "cannot",
+      "reason": "Spa appointments, not shared sessions.",
+      "note": "CA$79–89 for a 2-hour contrast session."
+    },
+    {
+      "id": "ritual",
+      "name": "Ritual Nordic Spa",
+      "city": "Victoria",
+      "website": "https://ritualnordicspa.com",
+      "platform": "Zenoti",
+      "track": "cannot",
+      "reason": "Spa booking system with no public spots-left count.",
+      "note": "CA$59–69 for a 2-hour circuit."
+    },
+    {
+      "id": "banya",
+      "name": "South-Western Bathhouse",
+      "city": "Mississauga",
+      "website": "https://banya.ca",
+      "platform": "None (walk-in)",
+      "track": "cannot",
+      "reason": "Takes no reservations, so there's nothing to read.",
+      "note": "CA$65 admission. Russian banya."
+    },
+    {
+      "id": "10xto",
+      "name": "10XTO Contrast Zone",
+      "city": "Toronto (Hotel X)",
+      "website": "https://www.10xto.com",
+      "platform": "None (members only)",
+      "track": "cannot",
+      "reason": "Private members' club with no public booking.",
+      "note": ""
+    },
+    {
+      "id": "circa",
+      "name": "Circa Thermal Studio",
+      "city": "Edmonton (Southwest)",
+      "website": "https://www.circathermalstudio.com",
+      "platform": "Early-access signup",
+      "track": "not_open",
+      "reason": "Opens early 2027; pop-ups only for now.",
+      "note": ""
+    },
+    {
+      "id": "forum",
+      "name": "Forum Thermal",
+      "city": "Calgary (downtown)",
+      "website": "https://www.forumthermal.com",
+      "platform": "Unknown",
+      "track": "not_open",
+      "reason": "Opens late 2026.",
+      "note": "18,000 sq ft thermal spa."
+    }
+  ]
+}
