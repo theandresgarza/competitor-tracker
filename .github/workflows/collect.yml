@@ -2,8 +2,9 @@ name: Collect studio schedules
 
 on:
   schedule:
-    # every 30 minutes; GitHub can run scheduled jobs a few minutes late
-    - cron: "7,37 * * * *"
+    # backup only: GitHub often skips scheduled runs. cron-job.org starts the
+    # every-30-minutes runs through workflow_dispatch (keeps us under 2,000 free minutes)
+    - cron: "7 */3 * * *"
   workflow_dispatch: {}
 
 permissions:
