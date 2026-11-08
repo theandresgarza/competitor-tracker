@@ -1,14 +1,14 @@
 {
-  "ran_at_utc": "2026-11-08T14:18:59Z",
+  "ran_at_utc": "2026-11-08T15:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 56
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 56
     },
     "tality-shipyards": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 58
     },
     "tality-kelowna": {
       "upcoming_sessions": 56
@@ -20,10 +20,10 @@
       "upcoming_sessions": 0
     },
     "tality-east-village": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 29
     },
     "othership": {
-      "upcoming_sessions": 492
+      "upcoming_sessions": 488
     },
     "kolm": {
       "upcoming_sessions": 51
@@ -41,22 +41,22 @@
       "upcoming_sessions": 33
     },
     "offline": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "alter": {
-      "upcoming_sessions": 120
+      "upcoming_sessions": 116
     },
     "nrghaus": {
       "upcoming_sessions": 56
     },
     "sweattonic": {
-      "upcoming_sessions": 257
+      "upcoming_sessions": 252
     },
     "recess": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "joy": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     }
   }
 }
