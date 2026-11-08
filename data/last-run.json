@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-08T23:37:12Z",
+  "ran_at_utc": "2026-11-08T23:52:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 48
@@ -23,7 +23,7 @@
       "upcoming_sessions": 21
     },
     "othership": {
-      "upcoming_sessions": 400
+      "upcoming_sessions": 396
     },
     "kolm": {
       "upcoming_sessions": 38
@@ -38,7 +38,7 @@
       "upcoming_sessions": 10
     },
     "reviva": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "offline": {
       "upcoming_sessions": 19
@@ -50,7 +50,7 @@
       "upcoming_sessions": 42
     },
     "sweattonic": {
-      "upcoming_sessions": 202
+      "upcoming_sessions": 201
     },
     "recess": {
       "upcoming_sessions": 34
