@@ -15,6 +15,7 @@ import datetime as dt
 import json
 import pathlib
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -25,7 +26,7 @@ DAYS_AHEAD = 3
 HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0 (schedule research; low frequency)"}
 FIELDS = [
     "studio", "location", "session_id", "type", "start_utc", "capacity", "booked", "available",
-    "waitlist", "status", "first_seen_utc", "last_seen_utc", "minutes_before_start", "readings",
+    "waitlist", "status", "timezone", "first_seen_utc", "last_seen_utc", "minutes_before_start", "readings",
 ]
 
 
@@ -39,7 +40,7 @@ def fetch_marianatek(tenant, start, end):
             page = json.load(r)
         out += page["results"]
         url = page["next"]
-        time.sleep(1)
+        time.sleep(0.3)
     return out
 
 
@@ -56,7 +57,7 @@ def save_month(month, rows):
     ordered = sorted(rows.values(), key=lambda r: (r["start_utc"], r["studio"], r["location"]))
     tmp = path.with_suffix(".tmp")
     with tmp.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=FIELDS)
+        w = csv.DictWriter(f, fieldnames=FIELDS, restval="")
         w.writeheader()
         w.writerows(ordered)
     tmp.replace(path)
@@ -67,23 +68,33 @@ def main():
     studios = json.loads((ROOT / "studios.json").read_text())["studios"]
     now = dt.datetime.now(dt.timezone.utc)
     now_s = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-    # a day back covers time zones west of UTC; sessions that already started are skipped below
-    start = (now - dt.timedelta(days=1)).date().isoformat()
-    end = (now + dt.timedelta(days=DAYS_AHEAD)).date().isoformat()
     months = {}
     run = {"ran_at_utc": now_s, "studios": {}}
 
-    fetched = {}  # one request per booking system, shared by its locations
+    def safe_fetch(job):
+        tenant, day = job
+        try:
+            return fetch_marianatek(tenant, day, day)
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            return e
+
+    # one request per booking system and day (shared by its locations), all at once to keep runs
+    # under a billed minute; a big schedule (Sweat and Tonic) takes ~45 s in one go
+    tenants = sorted({s["tenant"] for s in studios if s.get("track") == "marianatek"})
+    days = [(now + dt.timedelta(days=d)).date().isoformat() for d in range(-1, DAYS_AHEAD + 1)]
+    jobs = [(t, d) for t in tenants for d in days]
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        results = dict(zip(jobs, pool.map(safe_fetch, jobs)))
+    fetched = {}
+    for (t, d), r in results.items():
+        if isinstance(r, Exception) or isinstance(fetched.get(t), Exception):
+            fetched[t] = r if isinstance(r, Exception) else fetched[t]
+        else:
+            fetched.setdefault(t, []).extend(r)
     for s in studios:
         if s.get("track") != "marianatek":
             continue
-        tenant = s["tenant"]
-        if tenant not in fetched:
-            try:
-                fetched[tenant] = fetch_marianatek(tenant, start, end)
-            except (urllib.error.URLError, TimeoutError, ValueError) as e:
-                fetched[tenant] = e
-        sessions = fetched[tenant]
+        sessions = fetched[s["tenant"]]
         if isinstance(sessions, Exception):
             run["studios"][s["id"]] = {"error": str(sessions)[:200]}
             continue
@@ -119,6 +130,7 @@ def main():
                 "available": available,
                 "waitlist": x.get("waitlist_count") or 0,
                 "status": x.get("status") or "",
+                "timezone": (x.get("location") or {}).get("timezone") or "",
                 "first_seen_utc": old["first_seen_utc"] if old else now_s,
                 "last_seen_utc": now_s,
                 "minutes_before_start": round((begins - now).total_seconds() / 60),

@@ -17,16 +17,13 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
       - name: Read schedules
-        run: python collect.py
+        run: python3 collect.py
       - name: Rebuild the view
-        run: python report.py
+        run: python3 report.py
       - name: Save the data
         run: |
           git config user.name "schedule-bot"

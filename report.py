@@ -11,6 +11,8 @@ import html
 import json
 import pathlib
 from collections import defaultdict
+from statistics import median
+from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
@@ -37,6 +39,30 @@ def load_sessions():
     return rows
 
 
+def guess_tz(city):
+    c = (city or "").lower()
+    if any(k in c for k in ("toronto", "montreal", "new york")):
+        return "America/Toronto"
+    if any(k in c for k in ("calgary", "edmonton", "sherwood")):
+        return "America/Edmonton"
+    return "America/Vancouver"
+
+
+BANDS = ["Weekday before 9", "Weekday 9–17", "Weekday from 17", "Weekend"]
+
+
+def band(local):
+    if local.weekday() >= 5:
+        return "Weekend"
+    if local.hour < 9:
+        return "Weekday before 9"
+    return "Weekday 9–17" if local.hour < 17 else "Weekday from 17"
+
+
+def pct(m):
+    return f"{m['fill']:.0%}" if m["capacity"] else "–"
+
+
 def summarize(rows):
     cap = sum(r["capacity"] for r in rows)
     booked = sum(r["booked"] for r in rows)
@@ -60,11 +86,15 @@ def main():
     if (DATA / "last-run.json").exists():
         last_run = json.loads((DATA / "last-run.json").read_text())
 
+    city = {x["id"]: x.get("city") for x in studios}
+    for r in rows:
+        r["local"] = r["start"].astimezone(ZoneInfo(r.get("timezone") or guess_tz(city.get(r["studio"]))))
     done = [r for r in rows if r["start"] <= now]
     week_ago = now - dt.timedelta(days=7)
     by_studio = defaultdict(list)
     for r in done:
         by_studio[r["studio"]].append(r)
+    names_early = {x["id"]: x["name"] for x in studios}
     first_day = min((r["start"] for r in done), default=None)
 
     # ---------- every studio ----------
@@ -107,6 +137,29 @@ def main():
                 f"<td class='r'>{m['fill']:.0%}</td><td class='r'>{m['full']}</td><td class='r'>{esc(money(m['visits'], s.get('price_per_visit_cad')))}</td></tr>"
             )
 
+    # ---------- by time of day (local time at each studio) ----------
+    band_rows = []
+    groups = defaultdict(list)
+    for r in done:
+        groups[(r["studio"], r["location"])].append(r)
+    groups_sorted = sorted(groups.items(), key=lambda kv: (names_early.get(kv[0][0], ""), kv[0][1]))
+    for (sid, loc), rs in groups_sorted + [(("", "All tracked locations"), done)]:
+        total = sum(r["booked"] for r in rs) or 1
+        cells = []
+        for b in BANDS:
+            m = summarize([r for r in rs if band(r["local"]) == b])
+            cells.append(f"<td class='r'><b>{pct(m)}</b><div class='small'>{m['visits'] / total:.0%} of visits · {m['sessions']} sessions</div></td>")
+        label = f"<b>{esc(names_early.get(sid, sid))}</b><div class='small'>{esc(loc)}</div>" if sid else f"<b>{esc(loc)}</b>"
+        band_rows.append(f"<tr{' class=total' if not sid else ''}><td>{label}</td>{''.join(cells)}</tr>")
+
+    hour_rows = []
+    for h in sorted({r["local"].hour for r in done}):
+        cells = []
+        for wk in (True, False):
+            m = summarize([r for r in done if r["local"].hour == h and (r["local"].weekday() < 5) == wk])
+            cells.append(f"<td class='r'><b>{pct(m)}</b><div class='small'>{num(m['visits'])} visits · {m['sessions']} sessions</div></td>")
+        hour_rows.append(f"<tr><td>{h:02d}:00–{h:02d}:59</td>{''.join(cells)}</tr>")
+
     # ---------- by week ----------
     weekly = defaultdict(lambda: defaultdict(list))
     for r in done:
@@ -138,6 +191,9 @@ def main():
     gaps = [(b - a).total_seconds() / 60 for a, b in zip(day_runs, day_runs[1:])]
     health = (f"Runs in the last 24 hours: {len(day_runs)} of about 48 planned. Longest gap: {round(max(gaps)) if gaps else 0} minutes."
               if runs else "Run log starts with the next run.")
+    recent_done = [r["minutes_before_start"] for r in done if r["start"] >= now - dt.timedelta(hours=24)]
+    if recent_done:
+        health += f" Last reading before each session in the last 24 hours: typically {round(median(recent_done))} minutes before it started."
 
     tracked_n = sum(1 for s in studios if s.get("track") == "marianatek")
     since = f"Data since {first_day:%d %b %Y}." if first_day else "No finished sessions yet."
@@ -159,6 +215,7 @@ a {{ color:var(--accent); }}
 table {{ width:100%; border-collapse:collapse; min-width:640px; }}
 th {{ text-align:left; font-size:12px; color:var(--muted); font-weight:600; padding:0 8px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }}
 td {{ padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }}
+tr.total td {{ background:var(--hl); }}
 th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge {{ font-size:12px; font-weight:700; padding:2px 8px; border-radius:999px; border:1px solid var(--line); white-space:nowrap; }}
 .badge.tracking {{ background:#e6f4ec; border-color:#9fd1b5; color:#1f6b47; }}
@@ -175,6 +232,14 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 
 <h2>Last 7 days</h2>
 <div class="card wrap"><table><tr><th>Studio · location</th><th class="r">Sessions</th><th class="r">Places</th><th class="r">Visits</th><th class="r">Visits a day</th><th class="r">Full</th><th class="r">Sold out</th><th class="r">Revenue, 7 days</th></tr>{''.join(week_rows)}</table></div>
+
+<h2>How full, by time of day</h2>
+<p class="small">Big number: share of places booked (fill) in finished sessions. Below it: that time's share of the location's visits, and how many sessions. Times are local to each studio, by when the session starts. Weekend = Saturday and Sunday.</p>
+<div class="card wrap"><table><tr><th>Studio · location</th>{''.join(f'<th class="r">{b}</th>' for b in BANDS)}</tr>{''.join(band_rows) or '<tr><td colspan="5" class="small">Nothing yet</td></tr>'}</table></div>
+
+<h2>How full, by hour</h2>
+<p class="small">All tracked locations together, local time.</p>
+<div class="card wrap"><table><tr><th>Session starts</th><th class="r">Weekdays</th><th class="r">Weekends</th></tr>{''.join(hour_rows) or '<tr><td colspan="3" class="small">Nothing yet</td></tr>'}</table></div>
 
 <h2>Booked so far, next 3 days</h2>
 <p class="small">Every location on each schedule right now. Most bookings come in the last day or two, so these keep rising until each session starts.</p>
