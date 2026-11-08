@@ -73,13 +73,19 @@ def main():
     months = {}
     run = {"ran_at_utc": now_s, "studios": {}}
 
+    fetched = {}  # one request per booking system, shared by its locations
     for s in studios:
         if s.get("track") != "marianatek":
             continue
-        try:
-            sessions = fetch_marianatek(s["tenant"], start, end)
-        except (urllib.error.URLError, TimeoutError, ValueError) as e:
-            run["studios"][s["id"]] = {"error": str(e)[:200]}
+        tenant = s["tenant"]
+        if tenant not in fetched:
+            try:
+                fetched[tenant] = fetch_marianatek(tenant, start, end)
+            except (urllib.error.URLError, TimeoutError, ValueError) as e:
+                fetched[tenant] = e
+        sessions = fetched[tenant]
+        if isinstance(sessions, Exception):
+            run["studios"][s["id"]] = {"error": str(sessions)[:200]}
             continue
         seen = 0
         for x in sessions:
@@ -89,6 +95,8 @@ def main():
             cap = x.get("capacity") or 0
             loc_name = (x.get("location") or {}).get("name", "")
             type_name = (x.get("class_type") or {}).get("name", "")
+            if s.get("include_locations") and loc_name.lower() not in [x.lower() for x in s["include_locations"]]:
+                continue
             if any(e.lower() in loc_name.lower() for e in s.get("exclude_locations", [])):
                 continue
             if s.get("include_types") and not any(t.lower() in type_name.lower() for t in s["include_types"]):
@@ -122,6 +130,15 @@ def main():
     for month, rows in months.items():
         save_month(month, rows)
     (DATA / "last-run.json").write_text(json.dumps(run, indent=2) + "\n")
+    # one line per run, so the view can show missed or failed runs
+    log = DATA / "runs.csv"
+    new_log = not log.exists()
+    with log.open("a", newline="") as f:
+        w = csv.writer(f)
+        if new_log:
+            w.writerow(["ran_at_utc", "studios_ok", "studios_failed", "upcoming_sessions"])
+        ok = [v for v in run["studios"].values() if "error" not in v]
+        w.writerow([now_s, len(ok), len(run["studios"]) - len(ok), sum(v["upcoming_sessions"] for v in ok)])
     print(json.dumps(run))
 
 

@@ -1,20 +1,131 @@
 {
-  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026). track: 'marianatek' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026). track: 'marianatek' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
   "studios": [
     {
-      "id": "tality",
-      "name": "Tality Wellness",
-      "city": "Vancouver, North Vancouver, Kitsilano, Kelowna, Squamish, Sherwood Park",
-      "website": "https://www.talitywellness.ca",
+      "id": "tality-mount-pleasant",
+      "name": "Tality Wellness · Mount Pleasant",
+      "city": "Vancouver (Mount Pleasant, 501-107 E 3rd Ave)",
+      "website": "https://www.talitywellness.ca/locations/mount-pleasant",
       "platform": "Mariana Tek",
       "track": "marianatek",
       "tenant": "talitywellness",
+      "include_locations": [
+        "Mount Pleasant"
+      ],
       "drop_in_cad": 47,
       "price_per_visit_cad": [
         20,
         30
       ],
-      "note": "Every location on its schedule is read: Mount Pleasant, Shipyards, Kitsilano, Kelowna and East Village now; Squamish and Sherwood Park appear once they list sessions. East Village (Calgary) isn't on Tality's website but still has sessions with almost no bookings. Unlimited CA$255/month, 10-pack CA$370."
+      "note": "The busiest Tality location (see the Tality demand doc)."
+    },
+    {
+      "id": "tality-kitsilano",
+      "name": "Tality Wellness · Kitsilano",
+      "city": "Vancouver (Kitsilano, 3719 W Broadway)",
+      "website": "https://www.talitywellness.ca/locations/kitsilano",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "Kitsilano"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": "Franchise location inside The Raven spa."
+    },
+    {
+      "id": "tality-shipyards",
+      "name": "Tality Wellness · Shipyards",
+      "city": "North Vancouver (Shipyards, 125 Victory Ship Way)",
+      "website": "https://www.talitywellness.ca/locations/shipyards",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "Shipyards"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": ""
+    },
+    {
+      "id": "tality-kelowna",
+      "name": "Tality Wellness · Kelowna",
+      "city": "Kelowna (1629 Water St)",
+      "website": "https://www.talitywellness.ca/locations/kelowna",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "Kelowna"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": ""
+    },
+    {
+      "id": "tality-squamish",
+      "name": "Tality Wellness · Squamish",
+      "city": "Squamish (38115 Laurelwood Rd)",
+      "website": "https://www.talitywellness.ca/locations/squamish",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "Squamish"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": "Opening: first sessions on the schedule start 14 Nov 2026."
+    },
+    {
+      "id": "tality-sherwood-park",
+      "name": "Tality Wellness · Sherwood Park",
+      "city": "Sherwood Park, Edmonton area (661 Wye Rd)",
+      "website": "https://www.talitywellness.ca/locations/sherwood-park",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "Sherwood Park"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": "Pre-sale: no sessions on the schedule yet. Tracking starts on its own once they are."
+    },
+    {
+      "id": "tality-east-village",
+      "name": "Tality Wellness · East Village",
+      "city": "Calgary (East Village)",
+      "website": "https://www.talitywellness.ca/all-locations",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "talitywellness",
+      "include_locations": [
+        "East Village"
+      ],
+      "drop_in_cad": 47,
+      "price_per_visit_cad": [
+        20,
+        30
+      ],
+      "note": "Not on Tality's website any more, but still has sessions on the schedule with almost no bookings."
     },
     {
       "id": "othership",
