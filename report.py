@@ -205,7 +205,7 @@ def main():
             runs = [dt.datetime.fromisoformat(r["ran_at_utc"].replace("Z", "+00:00")) for r in csv.DictReader(f)]
     day_runs = sorted(t for t in runs if t >= now - dt.timedelta(hours=24))
     gaps = [(b - a).total_seconds() / 60 for a, b in zip(day_runs, day_runs[1:])]
-    health = (f"Runs in the last 24 hours: {len(day_runs)} of about 48 planned. Longest gap: {round(max(gaps)) if gaps else 0} minutes."
+    health = (f"Runs in the last 24 hours: {len(day_runs)} of about 96 planned. Longest gap: {round(max(gaps)) if gaps else 0} minutes."
               if runs else "Run log starts with the next run.")
     recent_done = [r["minutes_before_start"] for r in done if r["start"] >= now - dt.timedelta(hours=24)]
     if recent_done:
@@ -240,8 +240,8 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge.cant, .badge.error {{ background:#fdecea; border-color:#f1b0a9; color:#9a2c22; }}
 </style></head><body><main>
 <h1>Studio tracker</h1>
-<p class="small">Sauna and cold-plunge studios and locations in Canada. {tracked_n} of {len(studios)} tracked automatically every 30 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
-<p class="small">“Visits” are places booked at the last reading before each session started, usually within 30 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
+<p class="small">Sauna and cold-plunge studios and locations in Canada. {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
+<p class="small">“Visits” are places booked at the last reading before each session started, usually within 15 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
 
 <h2>Every studio</h2>
 <div class="card wrap"><table><tr><th>Studio</th><th>Website</th><th>Booking system</th><th>Status</th><th>Why</th></tr>{''.join(status_rows)}</table></div>
