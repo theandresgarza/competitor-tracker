@@ -64,6 +64,18 @@ def local_zone(name, city):
     return dt.timezone.utc
 
 
+CHECKPOINTS_H = [72, 48, 24, 12, 6, 3, 2, 1]
+
+
+def booked_by(rs, h):
+    """Share of final bookings already made h hours before, over sessions that have that checkpoint."""
+    have = [r for r in rs if r.get(f"booked_{h}h", "") != ""]
+    final = sum(r["booked"] for r in have)
+    if not have or not final:
+        return "–"
+    return f"{sum(int(r[f'booked_{h}h']) for r in have) / final:.0%}"
+
+
 BANDS = ["Weekday before 9", "Weekday 9–17", "Weekday from 17", "Weekend"]
 
 
@@ -176,6 +188,13 @@ def main():
             cells.append(f"<td class='r'><b>{pct(m)}</b><div class='small'>{num(m['visits'])} visits · {m['sessions']} sessions</div></td>")
         hour_rows.append(f"<tr><td>{h:02d}:00–{h:02d}:59</td>{''.join(cells)}</tr>")
 
+    # ---------- how early people book ----------
+    early_rows = []
+    for (sid, loc), rs in groups_sorted + [(("", "All tracked locations"), done)]:
+        cells = "".join(f"<td class='r'>{booked_by(rs, h)}</td>" for h in CHECKPOINTS_H)
+        label = f"<b>{esc(names_early.get(sid, sid))}</b><div class='small'>{esc(loc)}</div>" if sid else f"<b>{esc(loc)}</b>"
+        early_rows.append(f"<tr{' class=total' if not sid else ''}><td>{label}</td>{cells}<td class='r'>100%</td></tr>")
+
     # ---------- by week ----------
     weekly = defaultdict(lambda: defaultdict(list))
     for r in done:
@@ -256,6 +275,10 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 <h2>How full, by hour</h2>
 <p class="small">All tracked locations together, local time.</p>
 <div class="card wrap"><table><tr><th>Session starts</th><th class="r">Weekdays</th><th class="r">Weekends</th></tr>{''.join(hour_rows) or '<tr><td colspan="3" class="small">Nothing yet</td></tr>'}</table></div>
+
+<h2>How early people book</h2>
+<p class="small">Share of each session’s final bookings already made at each point before it started. Example: 40% under “24 h” means 4 in 10 places were booked a day or more ahead; the rest came in the last day. Final = last reading before the start. Saved from 8 Nov 2026 on, for sessions we saw before each point.</p>
+<div class="card wrap"><table><tr><th>Studio · location</th>{''.join(f'<th class="r">{h} h before</th>' for h in CHECKPOINTS_H)}<th class="r">At start</th></tr>{''.join(early_rows) or '<tr><td colspan="10" class="small">Nothing yet</td></tr>'}</table></div>
 
 <h2>Booked so far, next 3 days</h2>
 <p class="small">Every location on each schedule right now. Most bookings come in the last day or two, so these keep rising until each session starts.</p>

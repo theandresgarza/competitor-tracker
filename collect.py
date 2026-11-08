@@ -23,11 +23,13 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
 DAYS_AHEAD = 3
+# bookings are saved as each session passes these points before its start, to show how early people book
+CHECKPOINTS_H = [72, 48, 24, 12, 6, 3, 2, 1]
 HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0 (schedule research; low frequency)"}
 FIELDS = [
     "studio", "location", "session_id", "type", "start_utc", "capacity", "booked", "available",
     "waitlist", "status", "timezone", "first_seen_utc", "last_seen_utc", "minutes_before_start", "readings",
-]
+] + [f"booked_{h}h" for h in CHECKPOINTS_H]
 
 
 def fetch_marianatek(tenant, start, end):
@@ -118,7 +120,17 @@ def main():
             rows = months.setdefault(month, load_month(month))
             key = (s["id"], str(x["id"]))
             available = x.get("available_spot_count") or 0
+            booked = max(0, cap - available)
+            minutes_before = round((begins - now).total_seconds() / 60)
             old = rows.get(key)
+            # keep checkpoints already saved; save a new one when this reading is the first past it
+            # (only if an earlier reading was taken before the point, so the value is accurate)
+            marks = {f"booked_{h}h": (old or {}).get(f"booked_{h}h", "") for h in CHECKPOINTS_H}
+            if old:
+                prev = int(old["minutes_before_start"])
+                for h in CHECKPOINTS_H:
+                    if not marks[f"booked_{h}h"] and prev > h * 60 >= minutes_before:
+                        marks[f"booked_{h}h"] = booked
             rows[key] = {
                 "studio": s["id"],
                 "location": loc_name,
@@ -126,15 +138,16 @@ def main():
                 "type": type_name,
                 "start_utc": begins.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "capacity": cap,
-                "booked": max(0, cap - available),
+                "booked": booked,
                 "available": available,
                 "waitlist": x.get("waitlist_count") or 0,
                 "status": x.get("status") or "",
                 "timezone": (x.get("location") or {}).get("timezone") or "",
                 "first_seen_utc": old["first_seen_utc"] if old else now_s,
                 "last_seen_utc": now_s,
-                "minutes_before_start": round((begins - now).total_seconds() / 60),
+                "minutes_before_start": minutes_before,
                 "readings": int(old["readings"]) + 1 if old else 1,
+                **marks,
             }
             seen += 1
         run["studios"][s["id"]] = {"upcoming_sessions": seen}
