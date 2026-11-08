@@ -48,6 +48,22 @@ def guess_tz(city):
     return "America/Vancouver"
 
 
+# old zone names some studios use; servers without the legacy tz files don't know them
+OLD_ZONES = {"Canada/Pacific": "America/Vancouver", "Canada/Mountain": "America/Edmonton",
+             "Canada/Central": "America/Winnipeg", "Canada/Eastern": "America/Toronto",
+             "US/Pacific": "America/Los_Angeles", "US/Mountain": "America/Denver",
+             "US/Central": "America/Chicago", "US/Eastern": "America/New_York"}
+
+
+def local_zone(name, city):
+    for key in (OLD_ZONES.get(name, name), guess_tz(city)):
+        try:
+            return ZoneInfo(key)
+        except Exception:
+            continue
+    return dt.timezone.utc
+
+
 BANDS = ["Weekday before 9", "Weekday 9–17", "Weekday from 17", "Weekend"]
 
 
@@ -88,7 +104,7 @@ def main():
 
     city = {x["id"]: x.get("city") for x in studios}
     for r in rows:
-        r["local"] = r["start"].astimezone(ZoneInfo(r.get("timezone") or guess_tz(city.get(r["studio"]))))
+        r["local"] = r["start"].astimezone(local_zone(r.get("timezone"), city.get(r["studio"])))
     done = [r for r in rows if r["start"] <= now]
     week_ago = now - dt.timedelta(days=7)
     by_studio = defaultdict(list)

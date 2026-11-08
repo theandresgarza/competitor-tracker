@@ -25,6 +25,8 @@ jobs:
       - name: Rebuild the view
         run: python3 report.py
       - name: Save the data
+        # save readings even if the view failed to build
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "schedule-bot"
           git config user.email "schedule-bot@users.noreply.github.com"
