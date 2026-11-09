@@ -14,7 +14,9 @@ from collections import defaultdict
 from statistics import median
 from zoneinfo import ZoneInfo
 
-TRACKERS = ("marianatek", "ferb")  # booking systems collect.py can read
+SESSION_TRACKERS = ("marianatek", "ferb", "momence")  # booking systems that show places booked
+SLOT_TRACKERS = ("madre",)  # sites that only show how busy each time is
+TRACKERS = SESSION_TRACKERS + SLOT_TRACKERS
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
@@ -47,8 +49,10 @@ def guess_tz(city):
         return "America/Toronto"
     if any(k in c for k in ("calgary", "edmonton", "sherwood")):
         return "America/Edmonton"
-    if "stockholm" in c:
-        return "Europe/Stockholm"
+    for key, zone in (("stockholm", "Europe/Stockholm"), ("london", "Europe/London"), ("barcelona", "Europe/Madrid"),
+                      ("kraków", "Europe/Warsaw"), ("mexico", "America/Mexico_City"), ("medell", "America/Bogota")):
+        if key in c:
+            return zone
     return "America/Vancouver"
 
 
@@ -136,6 +140,8 @@ def main():
         err = (last_run.get("studios", {}).get(s["id"]) or {}).get("error")
         if tracked and err:
             badge, why = "Error", f"Last run failed: {err}"
+        elif tracked and s.get("track") in SLOT_TRACKERS:
+            badge, why = "Tracking", "Busy level only: the site shows each time as open, popular or almost full, not how many are booked"
         elif tracked:
             badge, why = "Tracking", "Public schedule shows places and spots left before each session"
         else:
@@ -151,7 +157,7 @@ def main():
     # ---------- last 7 days, per location ----------
     week_rows = []
     for s in studios:
-        if s.get("track") not in TRACKERS:
+        if s.get("track") not in SESSION_TRACKERS:
             continue
         recent = [r for r in by_studio.get(s["id"], []) if r["start"] >= week_ago]
         locs = defaultdict(list)
@@ -221,6 +227,35 @@ def main():
         m = summarize(rs)
         up_rows.append(f"<tr><td>{esc(names.get(sid, sid))}</td><td>{esc(loc)}</td><td class='r'>{num(m['sessions'])}</td><td class='r'>{num(m['capacity'])}</td><td class='r'>{num(m['visits'])}</td><td class='r'>{m['fill']:.0%}</td></tr>")
 
+    # ---------- busy level only (MADRE) ----------
+    slot_rows = []
+    slots = []
+    for path in sorted(DATA.glob("slots-*.csv")):
+        with path.open(newline="") as f:
+            slots += list(csv.DictReader(f))
+    levels = ["open", "popular", "almost_full", "gone"]
+    for s in studios:
+        if s.get("track") not in SLOT_TRACKERS:
+            continue
+        zone = local_zone(s.get("timezone"), s.get("city"))
+        past = []
+        for r in slots:
+            if r["studio"] != s["id"]:
+                continue
+            start = dt.datetime.fromisoformat(r["slot_start_utc"].replace("Z", "+00:00"))
+            if start <= now:
+                past.append((start.astimezone(zone), r["busiest_status"]))
+        if not past:
+            slot_rows.append(f"<tr><td><b>{esc(s['name'])}</b></td><td colspan='5' class='small'>No finished times recorded yet</td></tr>")
+            continue
+        for label, keep in (("All", lambda d: True), ("Weekdays before 17", lambda d: d.weekday() < 5 and d.hour < 17),
+                            ("Weekdays from 17", lambda d: d.weekday() < 5 and d.hour >= 17), ("Weekend", lambda d: d.weekday() >= 5)):
+            sel = [st for d, st in past if keep(d)]
+            if not sel:
+                continue
+            cells = "".join(f"<td class='r'>{sum(1 for x in sel if x == lv) / len(sel):.0%}</td>" for lv in levels)
+            slot_rows.append(f"<tr><td><b>{esc(s['name'])}</b><div class='small'>{esc(label)} · {len(sel)} arrival times</div></td>{cells}</tr>")
+
     # ---------- did the runs happen? ----------
     runs = []
     if (DATA / "runs.csv").exists():
@@ -263,7 +298,7 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge.cant, .badge.error {{ background:#fdecea; border-color:#f1b0a9; color:#9a2c22; }}
 </style></head><body><main>
 <h1>Studio tracker</h1>
-<p class="small">Sauna and cold-plunge studios in Canada, plus a few abroad to compare. {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
+<p class="small">Sauna and cold-plunge studios in Canada, plus studios abroad to compare (Mexico, Colombia, UK, Spain, Sweden). {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
 <p class="small">“Visits” are places booked at the last reading before each session started, usually within 15 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
 
 <h2>Every studio</h2>
@@ -287,6 +322,10 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 <h2>Booked so far, next 3 days</h2>
 <p class="small">Every location on each schedule right now. Most bookings come in the last day or two, so these keep rising until each session starts.</p>
 <div class="card wrap"><table><tr><th>Studio</th><th>Location</th><th class="r">Sessions</th><th class="r">Places</th><th class="r">Booked</th><th class="r">Full</th></tr>{''.join(up_rows) or '<tr><td colspan="6" class="small">Nothing yet</td></tr>'}</table></div>
+
+<h2>Busy level only</h2>
+<p class="small">Sites that don't show how many are booked, only a label for each arrival time. Share of finished arrival times by the busiest label seen before they started. “Gone” = the time was listed, then disappeared more than an hour before it started (most likely full, or closed by the studio).</p>
+<div class="card wrap"><table><tr><th>Studio</th><th class="r">Open</th><th class="r">Popular</th><th class="r">Almost full</th><th class="r">Gone</th></tr>{''.join(slot_rows) or '<tr><td colspan="5" class="small">Nothing yet</td></tr>'}</table></div>
 
 <h2>By week</h2>
 <p class="small">Weeks start on Monday (UTC). The current week is still filling in.</p>

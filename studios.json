@@ -1,5 +1,5 @@
 {
-  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek' or 'ferb' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek', 'ferb' or 'momence' = collect.py reads places booked from its public schedule; 'madre' = only a busy label per time is public (data/slots-*.csv); 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
   "studios": [
     {
       "id": "tality-mount-pleasant",
@@ -539,6 +539,155 @@
         "Slakthuset"
       ],
       "note": "Outdoor site, 26–28 places, no changing rooms or toilets. Same prices as Mood. Open Sauna not counted."
+    },
+    {
+      "id": "koti-polanco",
+      "name": "Koti Wellness · Polanco",
+      "city": "Mexico City (Polanco)",
+      "website": "https://kotiwellness.com/services",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "kotiwellness",
+      "include_locations": [
+        "Polanco"
+      ],
+      "include_types": [
+        "Free Flow",
+        "Day Pass",
+        "Sesión Privada"
+      ],
+      "drop_in_cad": 30,
+      "price_per_visit_cad": [
+        14,
+        20
+      ],
+      "note": "Prices: MXN 400 a session per Time Out (undated); CAD at about 0.075 per MXN. Massages and events not counted."
+    },
+    {
+      "id": "koti-condesa",
+      "name": "Koti Wellness · Condesa",
+      "city": "Mexico City (Condesa)",
+      "website": "https://kotiwellness.com/services",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "kotiwellness",
+      "include_locations": [
+        "Condesa"
+      ],
+      "include_types": [
+        "Free Flow",
+        "Day Pass",
+        "Sesión Privada"
+      ],
+      "drop_in_cad": 30,
+      "price_per_visit_cad": [
+        14,
+        20
+      ],
+      "note": "Prices: MXN 400 a session per Time Out (undated); CAD at about 0.075 per MXN. Massages and events not counted."
+    },
+    {
+      "id": "koti-lomas",
+      "name": "Koti Wellness · Lomas de Chapultepec",
+      "city": "Mexico City (Lomas de Chapultepec)",
+      "website": "https://kotiwellness.com/services",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "kotiwellness",
+      "include_locations": [
+        "Lomas de Chapultepec"
+      ],
+      "include_types": [
+        "Free Flow",
+        "Day Pass",
+        "Sesión Privada"
+      ],
+      "drop_in_cad": 30,
+      "price_per_visit_cad": [
+        14,
+        20
+      ],
+      "note": "Prices: MXN 400 a session per Time Out (undated); CAD at about 0.075 per MXN. Massages and events not counted."
+    },
+    {
+      "id": "koti-roma",
+      "name": "Koti Wellness · Roma Norte",
+      "city": "Mexico City (Roma Norte)",
+      "website": "https://kotiwellness.com/services",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "kotiwellness",
+      "include_locations": [
+        "Roma Norte"
+      ],
+      "include_types": [
+        "Free Flow",
+        "Day Pass",
+        "Sesión Privada"
+      ],
+      "drop_in_cad": 30,
+      "price_per_visit_cad": [
+        14,
+        20
+      ],
+      "note": "Prices: MXN 400 a session per Time Out (undated); CAD at about 0.075 per MXN. Massages and events not counted."
+    },
+    {
+      "id": "arc-canary-wharf",
+      "name": "ARC · Canary Wharf",
+      "city": "London, UK (Canary Wharf)",
+      "website": "https://arc-community.com/book-now",
+      "platform": "Mariana Tek",
+      "track": "marianatek",
+      "tenant": "arc",
+      "drop_in_cad": 52,
+      "price_per_visit_cad": [
+        23,
+        34
+      ],
+      "note": "UK's largest sauna (65 people), 8 ice baths; opened Jan 2025. About £28 a session; CAD at about 1.85 per GBP. Rich-city comparison."
+    },
+    {
+      "id": "kold-bcn",
+      "name": "KOLD BCN",
+      "city": "Barcelona, Spain",
+      "website": "https://koldbcn.com/timetable/",
+      "platform": "Momence",
+      "track": "momence",
+      "tenant": "238446",
+      "timezone": "Europe/Madrid",
+      "drop_in_cad": 40,
+      "price_per_visit_cad": [
+        30,
+        40
+      ],
+      "note": "60-min Social Contrast Therapy, 7 places a session. €25 single, 10 for €210; CAD at about 1.6 per EUR."
+    },
+    {
+      "id": "madre-medellin",
+      "name": "MADRE",
+      "city": "Medellín, Colombia (El Poblado, Cra. 40 # 10A-30)",
+      "website": "https://vivamadre.com/schedule",
+      "platform": "Custom (vivamadre.com)",
+      "track": "madre",
+      "tenant": "vivamadre",
+      "timezone": "America/Bogota",
+      "drop_in_cad": 41,
+      "price_per_visit_cad": [
+        25,
+        41
+      ],
+      "note": "40-person sauna, 4 ice baths, 90-min sessions, walk-ins welcome. COP 120k single, 80–100k in packs, 600k/month unlimited. First month (Sep 2026): US$14k revenue, 480 customers (founder's post). Only open / popular / almost-full labels are public."
+    },
+    {
+      "id": "saunapark-platinium",
+      "name": "SaunaPark Platinium",
+      "city": "Kraków, Poland (Reymonta 22)",
+      "website": "https://saunaparkplatinium.pl/cennik/",
+      "platform": "Iksoris (ticket shop)",
+      "track": "cannot",
+      "reason": "Sells day tickets (1 h zł60, 2 h zł80, 3 h zł90, open day zł100) with no time slots or places shown, so there's nothing to read.",
+      "note": "Kraków's largest saunarium: 10 saunas incl. banya, pool, jacuzzi, cooling zone. Traditional, not a social contrast club."
     }
   ]
 }

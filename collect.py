@@ -1,6 +1,6 @@
 """Save how full each studio's upcoming sessions are.
 
-Run every 30 minutes. For each studio with a public Mariana Tek or Ferb schedule it reads the
+Run every 30 minutes. For each studio with a public Mariana Tek, Ferb or Momence schedule it reads the
 next few days of sessions and keeps the latest reading of each session taken before
 it starts. Booking systems wipe the numbers once a session starts, so the last
 reading before the start is the closest we get to how many people came.
@@ -12,6 +12,7 @@ Standard library only, so it runs anywhere with Python 3.9+.
 
 import csv
 import datetime as dt
+import functools
 import json
 import pathlib
 import time
@@ -75,7 +76,122 @@ def fetch_ferb(brand, start, end):
     return out
 
 
-READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb}
+@functools.lru_cache(maxsize=None)
+def _momence_all(host):
+    url = f"https://readonly-api.momence.com/host-plugins/host/{host}/host-schedule/sessions?pageSize=500"
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r).get("payload") or []
+
+
+def fetch_momence(host, start, end):
+    """Momence (used by KOLD BCN) returns every upcoming session in one list, with places left.
+    Fetched once per run and split by UTC day; no time zone is given, so studios.json sets it."""
+    out = []
+    for x in _momence_all(host):
+        begins = x["startsAt"][:19] + "Z"
+        if not (start <= begins[:10] <= end):
+            continue
+        spots = x.get("remainingSpots") or {}
+        cap = spots.get("total") or x.get("capacity") or 0
+        out.append({
+            "id": x["id"],
+            "start_datetime": begins,
+            "capacity": cap,
+            "available_spot_count": spots.get("remaining", cap - (x.get("ticketsSold") or 0)),
+            "is_cancelled": bool(x.get("isCancelled")),
+            "status": "",
+            "location": {"name": x.get("location") or "", "timezone": ""},
+            "class_type": {"name": (x.get("sessionName") or "").strip()},
+        })
+    return out
+
+
+READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb, "momence": fetch_momence}
+
+# Some booking sites only say how busy a time is (e.g. MADRE: open / popular / almost_full),
+# not how many places are booked. Those go to data/slots-YYYY-MM.csv instead.
+SLOT_FIELDS = ["studio", "slot_start_utc", "last_status", "busiest_status", "first_seen_utc",
+               "last_seen_utc", "minutes_before_start", "readings", "missing_since_utc"]
+STATUS_RANK = {"open": 0, "popular": 1, "almost_full": 2, "gone": 3}
+
+
+def fetch_madre(day):
+    url = f"https://vivamadre.com/api/schedule/availability?date={day}"
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r).get("slots") or []
+
+
+SLOT_READERS = {"madre": fetch_madre}
+
+
+def collect_slots(studios, now, days, run):
+    """Save the latest status of each upcoming slot. A slot that was listed and then disappears
+    before it starts is marked 'gone' (most likely full, or closed by the studio)."""
+    now_s = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    for s in studios:
+        reader = SLOT_READERS.get(s.get("track"))
+        if not reader:
+            continue
+        # these sites take local dates and reject past ones, so read today onward in the studio's time zone
+        today = now.astimezone(ZoneInfo(s.get("timezone") or "UTC")).date()
+        days = [(today + dt.timedelta(days=d)).isoformat() for d in range(DAYS_AHEAD + 1)]
+        try:
+            slots = [x for d in days for x in reader(d)]
+        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+            run["studios"][s["id"]] = {"error": str(e)[:200]}
+            continue
+        months = {}
+
+        def month_rows(month):
+            if month not in months:
+                path = DATA / f"slots-{month}.csv"
+                rows = {}
+                if path.exists():
+                    with path.open(newline="") as f:
+                        rows = {(r["studio"], r["slot_start_utc"]): r for r in csv.DictReader(f)}
+                months[month] = rows
+            return months[month]
+
+        listed = set()
+        for x in slots:
+            begins = dt.datetime.fromisoformat(x["slot_start"]).astimezone(dt.timezone.utc)
+            if begins <= now:
+                continue
+            start_s = begins.strftime("%Y-%m-%dT%H:%M:%SZ")
+            listed.add(start_s)
+            rows = month_rows(begins.strftime("%Y-%m"))
+            old = rows.get((s["id"], start_s))
+            status = x.get("status") or "open"
+            busiest = max([status, (old or {}).get("busiest_status") or "open"], key=lambda v: STATUS_RANK.get(v, 0))
+            rows[(s["id"], start_s)] = {
+                "studio": s["id"], "slot_start_utc": start_s, "last_status": status, "busiest_status": busiest,
+                "first_seen_utc": old["first_seen_utc"] if old else now_s, "last_seen_utc": now_s,
+                "minutes_before_start": round((begins - now).total_seconds() / 60),
+                "readings": int(old["readings"]) + 1 if old else 1, "missing_since_utc": "",
+            }
+        # slots we saw before, still in the future and inside the window we just read, but no longer listed
+        first_day, last_day = days[0], days[-1]
+        for d in days + [(today + dt.timedelta(days=DAYS_AHEAD + 1)).isoformat()]:
+            month_rows(d[:7])
+        for rows in months.values():
+            for (sid, start_s), r in rows.items():
+                if sid != s["id"] or start_s in listed or r.get("missing_since_utc"):
+                    continue
+                begins = dt.datetime.fromisoformat(start_s.replace("Z", "+00:00"))
+                # some sites hide a slot shortly before it starts, so only count it gone if it's over an hour away
+                if begins > now + dt.timedelta(hours=1) and first_day <= start_s[:10] <= last_day:
+                    r.update(last_status="gone", busiest_status="gone", missing_since_utc=now_s)
+        for month, rows in months.items():
+            path = DATA / f"slots-{month}.csv"
+            tmp = path.with_suffix(".tmp")
+            with tmp.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=SLOT_FIELDS, restval="")
+                w.writeheader()
+                w.writerows(sorted(rows.values(), key=lambda r: (r["slot_start_utc"], r["studio"])))
+            tmp.replace(path)
+        run["studios"][s["id"]] = {"upcoming_sessions": len(listed)}
 
 
 def load_month(month):
@@ -175,7 +291,7 @@ def main():
                 "available": available,
                 "waitlist": x.get("waitlist_count") or 0,
                 "status": x.get("status") or "",
-                "timezone": (x.get("location") or {}).get("timezone") or "",
+                "timezone": (x.get("location") or {}).get("timezone") or s.get("timezone", ""),
                 "first_seen_utc": old["first_seen_utc"] if old else now_s,
                 "last_seen_utc": now_s,
                 "minutes_before_start": minutes_before,
@@ -187,6 +303,7 @@ def main():
 
     for month, rows in months.items():
         save_month(month, rows)
+    collect_slots(studios, now, days, run)
     (DATA / "last-run.json").write_text(json.dumps(run, indent=2) + "\n")
     # one line per run, so the view can show missed or failed runs
     log = DATA / "runs.csv"
