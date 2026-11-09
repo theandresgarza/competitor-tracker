@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-09T11:52:13Z",
+  "ran_at_utc": "2026-11-09T12:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -23,7 +23,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 521
+      "upcoming_sessions": 518
     },
     "kolm": {
       "upcoming_sessions": 49
@@ -50,7 +50,7 @@
       "upcoming_sessions": 48
     },
     "sweattonic": {
-      "upcoming_sessions": 271
+      "upcoming_sessions": 269
     },
     "recess": {
       "upcoming_sessions": 43
