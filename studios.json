@@ -1,5 +1,5 @@
 {
-  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026). track: 'marianatek' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek' or 'ferb' = collect.py reads its public schedule; 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
   "studios": [
     {
       "id": "tality-mount-pleasant",
@@ -495,6 +495,50 @@
       "track": "not_open",
       "reason": "Opens late 2026.",
       "note": "18,000 sq ft thermal spa."
+    },
+    {
+      "id": "sacred-sauna-mood",
+      "name": "The Sacred Sauna · Mood",
+      "city": "Stockholm, Sweden (Mood, Mäster Samuelsgatan 18, level 3)",
+      "website": "https://www.thesacredsauna.se/booking",
+      "platform": "Ferb",
+      "track": "ferb",
+      "tenant": "sacredsauna",
+      "include_types": [
+        "Sacred Session",
+        "Serenity Session"
+      ],
+      "drop_in_cad": 46,
+      "price_per_visit_cad": [
+        20,
+        33
+      ],
+      "include_locations": [
+        "Mood"
+      ],
+      "note": "Guided 60-min sessions, 20 places, rooftop terrace with one chilled pool. Prices in SEK: single 349, credits 120–280, member 199 a session, unlimited 1,399/month. CAD figures at about 0.13 CAD per SEK; average per visit assumed 150–250 SEK. The unguided Open Sauna (250 SEK) shows no headcount, so it isn't counted."
+    },
+    {
+      "id": "sacred-sauna-slakthuset",
+      "name": "The Sacred Sauna · Slakthuset",
+      "city": "Stockholm, Sweden (Slakthusområdet, Hallvägen 7, Johanneshov)",
+      "website": "https://www.thesacredsauna.se/booking",
+      "platform": "Ferb",
+      "track": "ferb",
+      "tenant": "sacredsauna",
+      "include_types": [
+        "Sacred Session",
+        "Serenity Session"
+      ],
+      "drop_in_cad": 46,
+      "price_per_visit_cad": [
+        20,
+        33
+      ],
+      "include_locations": [
+        "Slakthuset"
+      ],
+      "note": "Outdoor site, 26–28 places, no changing rooms or toilets. Same prices as Mood. Open Sauna not counted."
     }
   ]
 }

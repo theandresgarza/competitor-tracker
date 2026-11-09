@@ -1,6 +1,6 @@
 """Save how full each studio's upcoming sessions are.
 
-Run every 30 minutes. For each studio with a public Mariana Tek schedule it reads the
+Run every 30 minutes. For each studio with a public Mariana Tek or Ferb schedule it reads the
 next few days of sessions and keeps the latest reading of each session taken before
 it starts. Booking systems wipe the numbers once a session starts, so the last
 reading before the start is the closest we get to how many people came.
@@ -19,6 +19,7 @@ from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.parse
 import urllib.request
+from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
@@ -44,6 +45,37 @@ def fetch_marianatek(tenant, start, end):
         url = page["next"]
         time.sleep(0.3)
     return out
+
+
+def fetch_ferb(brand, start, end):
+    """Ferb (used by The Sacred Sauna) lists classes with local start times and spots left.
+    Returned in the same shape as Mariana Tek classes so the rest of the script is shared."""
+    query = {"start": start, "end": end, "includeCourseSessions": "true", "includePrivateEvents": "false"}
+    url = f"https://core.ferb.co/v1/public/brands/{brand}/schedule?{urllib.parse.urlencode(query)}"
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        page = json.load(r)
+    out = []
+    for x in page.get("data") or []:
+        if x.get("itemType") != "class":
+            continue
+        loc = x.get("location") or {}
+        tz = loc.get("timezone") or "UTC"
+        local = dt.datetime.fromisoformat(f"{x['startDate']}T{x['startTime']}").replace(tzinfo=ZoneInfo(tz))
+        out.append({
+            "id": x["id"],
+            "start_datetime": local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "capacity": x.get("capacity") or 0,
+            "available_spot_count": x.get("spotsRemaining") or 0,
+            "is_cancelled": bool(x.get("cancelledAt")),
+            "status": "" if x.get("bookable", True) else "Not bookable",
+            "location": {"name": (loc.get("name") or "").replace("\U0001f4cd", "").strip(), "timezone": tz},
+            "class_type": {"name": (x.get("classType") or {}).get("name") or x.get("title") or ""},
+        })
+    return out
+
+
+READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb}
 
 
 def load_month(month):
@@ -74,29 +106,30 @@ def main():
     run = {"ran_at_utc": now_s, "studios": {}}
 
     def safe_fetch(job):
-        tenant, day = job
+        platform, tenant, day = job
         try:
-            return fetch_marianatek(tenant, day, day)
+            return READERS[platform](tenant, day, day)
         except (urllib.error.URLError, TimeoutError, ValueError) as e:
             return e
 
     # one request per booking system and day (shared by its locations), all at once to keep runs
     # under a billed minute; a big schedule (Sweat and Tonic) takes ~45 s in one go
-    tenants = sorted({s["tenant"] for s in studios if s.get("track") == "marianatek"})
+    tenants = sorted({(s["track"], s["tenant"]) for s in studios if s.get("track") in READERS})
     days = [(now + dt.timedelta(days=d)).date().isoformat() for d in range(-1, DAYS_AHEAD + 1)]
-    jobs = [(t, d) for t in tenants for d in days]
+    jobs = [(p, t, d) for p, t in tenants for d in days]
     with ThreadPoolExecutor(max_workers=16) as pool:
         results = dict(zip(jobs, pool.map(safe_fetch, jobs)))
     fetched = {}
-    for (t, d), r in results.items():
+    for (p, t, d), r in results.items():
+        t = (p, t)
         if isinstance(r, Exception) or isinstance(fetched.get(t), Exception):
             fetched[t] = r if isinstance(r, Exception) else fetched[t]
         else:
             fetched.setdefault(t, []).extend(r)
     for s in studios:
-        if s.get("track") != "marianatek":
+        if s.get("track") not in READERS:
             continue
-        sessions = fetched[s["tenant"]]
+        sessions = fetched[(s["track"], s["tenant"])]
         if isinstance(sessions, Exception):
             run["studios"][s["id"]] = {"error": str(sessions)[:200]}
             continue

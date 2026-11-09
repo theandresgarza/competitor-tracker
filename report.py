@@ -14,6 +14,8 @@ from collections import defaultdict
 from statistics import median
 from zoneinfo import ZoneInfo
 
+TRACKERS = ("marianatek", "ferb")  # booking systems collect.py can read
+
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
 VIEW = ROOT / "view"
@@ -45,6 +47,8 @@ def guess_tz(city):
         return "America/Toronto"
     if any(k in c for k in ("calgary", "edmonton", "sherwood")):
         return "America/Edmonton"
+    if "stockholm" in c:
+        return "Europe/Stockholm"
     return "America/Vancouver"
 
 
@@ -128,7 +132,7 @@ def main():
     # ---------- every studio ----------
     status_rows = []
     for s in studios:
-        tracked = s.get("track") == "marianatek"
+        tracked = s.get("track") in TRACKERS
         err = (last_run.get("studios", {}).get(s["id"]) or {}).get("error")
         if tracked and err:
             badge, why = "Error", f"Last run failed: {err}"
@@ -147,7 +151,7 @@ def main():
     # ---------- last 7 days, per location ----------
     week_rows = []
     for s in studios:
-        if s.get("track") != "marianatek":
+        if s.get("track") not in TRACKERS:
             continue
         recent = [r for r in by_studio.get(s["id"], []) if r["start"] >= week_ago]
         locs = defaultdict(list)
@@ -230,7 +234,7 @@ def main():
     if recent_done:
         health += f" Last reading before each session in the last 24 hours: typically {round(median(recent_done))} minutes before it started."
 
-    tracked_n = sum(1 for s in studios if s.get("track") == "marianatek")
+    tracked_n = sum(1 for s in studios if s.get("track") in TRACKERS)
     since = f"Data since {first_day:%d %b %Y}." if first_day else "No finished sessions yet."
     page = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -259,7 +263,7 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge.cant, .badge.error {{ background:#fdecea; border-color:#f1b0a9; color:#9a2c22; }}
 </style></head><body><main>
 <h1>Studio tracker</h1>
-<p class="small">Sauna and cold-plunge studios and locations in Canada. {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
+<p class="small">Sauna and cold-plunge studios in Canada, plus a few abroad to compare. {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
 <p class="small">“Visits” are places booked at the last reading before each session started, usually within 15 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
 
 <h2>Every studio</h2>
