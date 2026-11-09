@@ -107,7 +107,34 @@ def fetch_momence(host, start, end):
     return out
 
 
-READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb, "momence": fetch_momence}
+def fetch_bastu(types, start, end):
+    """Bastú (Buenos Aires) books private rooms: each room and time is free or taken.
+    Each room-time is saved as a session with 1 place, booked if it's no longer available.
+    Times the studio blocks (e.g. near closing) also show as taken, so this reads high."""
+    out = []
+    day = dt.date.fromisoformat(start)
+    while day.isoformat() <= end:
+        for kind in types.split(","):
+            url = f"https://www.bastusaunahouse.com/api/availability?resourceType={kind}&date={day.isoformat()}"
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                slots = json.load(r).get("slots") or []
+            for x in slots:
+                out.append({
+                    "id": f"{x['resourceId']}-{x['startTime']}",
+                    "start_datetime": x["startTime"][:19] + "Z",
+                    "capacity": 1,
+                    "available_spot_count": 1 if x.get("available") else 0,
+                    "is_cancelled": False,
+                    "status": "",
+                    "location": {"name": x.get("resourceName") or kind, "timezone": "America/Argentina/Buenos_Aires"},
+                    "class_type": {"name": kind},
+                })
+        day += dt.timedelta(days=1)
+    return out
+
+
+READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb, "momence": fetch_momence, "bastu": fetch_bastu}
 
 # Some booking sites only say how busy a time is (e.g. MADRE: open / popular / almost_full),
 # not how many places are booked. Those go to data/slots-YYYY-MM.csv instead.

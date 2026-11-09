@@ -14,7 +14,7 @@ from collections import defaultdict
 from statistics import median
 from zoneinfo import ZoneInfo
 
-SESSION_TRACKERS = ("marianatek", "ferb", "momence")  # booking systems that show places booked
+SESSION_TRACKERS = ("marianatek", "ferb", "momence", "bastu")  # booking systems that show places booked
 SLOT_TRACKERS = ("madre",)  # sites that only show how busy each time is
 TRACKERS = SESSION_TRACKERS + SLOT_TRACKERS
 
@@ -50,7 +50,7 @@ def guess_tz(city):
     if any(k in c for k in ("calgary", "edmonton", "sherwood")):
         return "America/Edmonton"
     for key, zone in (("stockholm", "Europe/Stockholm"), ("london", "Europe/London"), ("barcelona", "Europe/Madrid"),
-                      ("kraków", "Europe/Warsaw"), ("mexico", "America/Mexico_City"), ("medell", "America/Bogota")):
+                      ("kraków", "Europe/Warsaw"), ("mexico", "America/Mexico_City"), ("medell", "America/Bogota"), ("buenos aires", "America/Argentina/Buenos_Aires")):
         if key in c:
             return zone
     return "America/Vancouver"
@@ -145,7 +145,7 @@ def main():
         elif tracked:
             badge, why = "Tracking", "Public schedule shows places and spots left before each session"
         else:
-            badge = {"later": "Not yet", "cannot": "Can't", "not_open": "Not open"}.get(s.get("track"), "Not yet")
+            badge = {"later": "Not yet", "cannot": "Can't", "not_open": "Not open", "closed": "Closed"}.get(s.get("track"), "Not yet")
             why = s.get("reason", "")
         status_rows.append(
             f"<tr><td><b>{esc(s['name'])}</b><div class='small'>{esc(s.get('city'))}</div></td>"
@@ -294,11 +294,11 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge {{ font-size:12px; font-weight:700; padding:2px 8px; border-radius:999px; border:1px solid var(--line); white-space:nowrap; }}
 .badge.tracking {{ background:#e6f4ec; border-color:#9fd1b5; color:#1f6b47; }}
 .badge.not-yet {{ background:#fff6e5; border-color:#f0cf8c; color:#8a5a00; }}
-.badge.not-open {{ background:#f1f4f7; color:var(--muted); }}
+.badge.not-open, .badge.closed {{ background:#f1f4f7; color:var(--muted); }}
 .badge.cant, .badge.error {{ background:#fdecea; border-color:#f1b0a9; color:#9a2c22; }}
 </style></head><body><main>
 <h1>Studio tracker</h1>
-<p class="small">Sauna and cold-plunge studios in Canada, plus studios abroad to compare (Mexico, Colombia, UK, Spain, Sweden). {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
+<p class="small">Sauna and cold-plunge studios in Canada, plus studios abroad to compare (Mexico, Colombia, Argentina, UK, Spain, Sweden). {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
 <p class="small">“Visits” are places booked at the last reading before each session started, usually within 15 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
 
 <h2>Every studio</h2>

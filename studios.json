@@ -1,5 +1,5 @@
 {
-  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek', 'ferb' or 'momence' = collect.py reads places booked from its public schedule; 'madre' = only a busy label per time is public (data/slots-*.csv); 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet. include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek', 'ferb' or 'momence' or 'bastu' = collect.py reads places booked from its public schedule; 'madre' = only a busy label per time is public (data/slots-*.csv); 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet; 'closed' = closed, no longer read (past readings kept). include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
   "studios": [
     {
       "id": "tality-mount-pleasant",
@@ -115,7 +115,8 @@
       "city": "Calgary (East Village)",
       "website": "https://www.talitywellness.ca/all-locations",
       "platform": "Mariana Tek",
-      "track": "marianatek",
+      "track": "closed",
+      "reason": "Closed: its sessions left Tality's schedule on 9 Nov 2026 and the location is gone from their booking system. Readings up to then are kept.",
       "tenant": "talitywellness",
       "include_locations": [
         "East Village"
@@ -688,6 +689,32 @@
       "track": "cannot",
       "reason": "Sells day tickets (1 h zł60, 2 h zł80, 3 h zł90, open day zł100) with no time slots or places shown, so there's nothing to read.",
       "note": "Kraków's largest saunarium: 10 saunas incl. banya, pool, jacuzzi, cooling zone. Traditional, not a social contrast club."
+    },
+    {
+      "id": "bastu",
+      "name": "Bastú Sauna House",
+      "city": "Buenos Aires, Argentina (Laprida 1791)",
+      "website": "https://www.bastusaunahouse.com/reservar",
+      "platform": "Custom (bastusaunahouse.com)",
+      "track": "bastu",
+      "tenant": "DRY_SAUNA,ICE_POOL",
+      "drop_in_cad": 29,
+      "price_per_visit_cad": [
+        20,
+        29
+      ],
+      "note": "Private rooms, not a shared session: 3 dry saunas (Finlandés, Noruego, Sueco; 30 min, up to 2 people) and 1 ice pool (10 min). Each room-time counts as 1 place, so 'visits' = room bookings, and times the studio blocks show as booked (reads high). The Turkish steam room showed as unavailable all week, so it isn't counted. Sauna ARS 30,000 (~US$21), ice ARS 15,000, combo ARS 38,000; memberships ARS 80–180k/month. CAD at about 0.001 per ARS."
+    },
+    {
+      "id": "las-ruinas",
+      "name": "Las Ruinas Bathhouse & Gym",
+      "city": "San Juan, Puerto Rico",
+      "website": "https://lasruinas.com",
+      "platform": "Mariana Tek",
+      "track": "later",
+      "tenant": "lasruinas",
+      "reason": "Mariana Tek like the others, but its schedule returns 403 (blocked by CloudFront) to plain requests, so it isn't read.",
+      "note": "Bathhouse day pass (2.5 h, about US$68 per Expedia), 10 places a start time. Also sold through Expedia, ResortPass and Fever."
     }
   ]
 }
