@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-09T03:52:15Z",
+  "ran_at_utc": "2026-11-09T04:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "tality-shipyards": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "tality-kelowna": {
-      "upcoming_sessions": 57
+      "upcoming_sessions": 56
     },
     "tality-squamish": {
       "upcoming_sessions": 0
@@ -32,7 +32,7 @@
       "upcoming_sessions": 30
     },
     "tevah": {
-      "upcoming_sessions": 81
+      "upcoming_sessions": 80
     },
     "goodsauna": {
       "upcoming_sessions": 11
