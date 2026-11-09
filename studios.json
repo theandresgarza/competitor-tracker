@@ -1,5 +1,5 @@
 {
-  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek', 'ferb' or 'momence' or 'bastu' = collect.py reads places booked from its public schedule; 'madre' = only a busy label per time is public (data/slots-*.csv); 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet; 'closed' = closed, no longer read (past readings kept). include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
+  "_note": "Every sauna and cold-plunge business we know about in Canada (checked 7 Nov 2026), plus studios abroad to compare (added 8 Nov 2026). track: 'marianatek', 'ferb' or 'momence', 'bastu', 'saunahaus', 'hothuts', 'rezerv' or 'wix' = collect.py reads places booked from its public schedule; 'madre' = only a busy label per time is public (data/slots-*.csv); 'later' = could be tracked with a different reader; 'cannot' = no public numbers to read; 'not_open' = not open yet; 'closed' = closed, no longer read (past readings kept). include_types / include_locations / exclude_locations limit what's counted (case-insensitive text match). price_per_visit_cad = what an average visit brings in (members pay less than drop-ins). For Tality it comes from the price mix; for the others it's an estimate of 45–65% of the drop-in price, the same ratio as Tality.",
   "studios": [
     {
       "id": "tality-mount-pleasant",
@@ -715,6 +715,190 @@
       "tenant": "lasruinas",
       "reason": "Mariana Tek like the others, but its schedule returns 403 (blocked by CloudFront) to plain requests, so it isn't read.",
       "note": "Bathhouse day pass (2.5 h, about US$68 per Expedia), 10 places a start time. Also sold through Expedia, ResortPass and Fever."
+    },
+    {
+      "id": "hot-huts",
+      "name": "Hot Huts",
+      "city": "Cape Town, South Africa (mobile beach saunas at tidal pools; also Johannesburg)",
+      "website": "https://book.hothuts.co.za",
+      "platform": "Custom (book.hothuts.co.za)",
+      "track": "hothuts",
+      "tenant": "hothuts",
+      "drop_in_cad": 10,
+      "price_per_visit_cad": [
+        5,
+        10
+      ],
+      "note": "Wood-fired mobile saunas for 7, 15-minute slots every 20 minutes; the ocean is the cold plunge. Price roughly R80–200 a slot (sources conflict, unverified); memberships R950–1,250/month. CAD at about 0.079 per ZAR."
+    },
+    {
+      "id": "saunahaus-cape-town",
+      "name": "SaunaHaüs",
+      "city": "Cape Town, South Africa (Mouille Point)",
+      "website": "https://book.saunahaus.club",
+      "platform": "Custom (book.saunahaus.club)",
+      "track": "saunahaus",
+      "tenant": "saunahaus",
+      "drop_in_cad": 24,
+      "price_per_visit_cad": [
+        11,
+        20
+      ],
+      "note": "Sauna for 35. Guided sessions (Deep, Flow, High) R300, Open Hours and Silent R200, events R400–550. CAD at about 0.079 per ZAR."
+    },
+    {
+      "id": "soma-sauna",
+      "name": "Soma Sauna",
+      "city": "Cape Town, South Africa (Blouberg)",
+      "website": "https://www.somasauna.co",
+      "platform": "Wix Bookings",
+      "track": "wix",
+      "tenant": "www.somasauna.co|Africa/Johannesburg",
+      "include_types": [
+        "Sauna Session"
+      ],
+      "drop_in_cad": 16,
+      "price_per_visit_cad": [
+        9,
+        16
+      ],
+      "note": "Sauna sessions for 12, R200. CAD at about 0.079 per ZAR."
+    },
+    {
+      "id": "rechill-asok",
+      "name": "RECHILL · Asok",
+      "city": "Bangkok, Thailand (Asok)",
+      "website": "https://rechill.co/pricing",
+      "platform": "Rezerv",
+      "track": "rezerv",
+      "tenant": "rechill.rezerv.co|Asia/Bangkok",
+      "include_locations": [
+        "Asok"
+      ],
+      "include_types": [
+        "Thermal Zone"
+      ],
+      "drop_in_cad": 32,
+      "price_per_visit_cad": [
+        25,
+        32
+      ],
+      "note": "2-hour Thermal Zone pass: ice bath, sauna, steam, hot tub. 750 THB single, 600 THB in a 50-pack. 13 places a slot. CAD at about 0.042 per THB."
+    },
+    {
+      "id": "rechill-thonglor",
+      "name": "RECHILL · Thonglor",
+      "city": "Bangkok, Thailand (Thonglor)",
+      "website": "https://rechill.co/pricing",
+      "platform": "Rezerv",
+      "track": "rezerv",
+      "tenant": "rechill.rezerv.co|Asia/Bangkok",
+      "include_locations": [
+        "Thonglor"
+      ],
+      "include_types": [
+        "Thermal Zone"
+      ],
+      "drop_in_cad": 32,
+      "price_per_visit_cad": [
+        25,
+        32
+      ],
+      "note": "Same as Asok, 30 places a slot (6 released to ClassPass)."
+    },
+    {
+      "id": "longevity-labs",
+      "name": "Longevity Labs · Thermal Life",
+      "city": "Manila, Philippines (BGC, MK Tan Centre)",
+      "website": "https://www.longevitylabsph.com/thermal-life-drop-in-packages",
+      "platform": "Wix Bookings",
+      "track": "wix",
+      "tenant": "longevitylabsph.com|Asia/Manila",
+      "include_types": [
+        "Thermal Life"
+      ],
+      "drop_in_cad": 36,
+      "price_per_visit_cad": [
+        26,
+        36
+      ],
+      "note": "'Largest communal sauna in the Philippines' with 4 cold plunges. Open/Quiet Flow ₱1,500 (₱1,100–1,300 in packs). Members and walk-ins may not show in the booking count. CAD at about 0.024 per PHP."
+    },
+    {
+      "id": "summit-recovery-cebu",
+      "name": "Summit Recovery",
+      "city": "Cebu, Philippines (Taft East Gate)",
+      "website": "https://www.summitrecovery.ph",
+      "platform": "Wix Bookings",
+      "track": "wix",
+      "tenant": "www.summitrecovery.ph|Asia/Manila",
+      "include_types": [
+        "Sauna"
+      ],
+      "drop_in_cad": 17,
+      "price_per_visit_cad": [
+        8,
+        17
+      ],
+      "note": "Sauna + cold plunge contrast sessions for 6, ₱700 (site says from ₱350). CAD at about 0.024 per PHP."
+    },
+    {
+      "id": "tawhay-siargao",
+      "name": "Tawhay Fitness · Recovery",
+      "city": "Siargao, Philippines (General Luna)",
+      "website": "https://www.tawhaysiargao.com",
+      "platform": "Wix Bookings",
+      "track": "wix",
+      "tenant": "www.tawhaysiargao.com|Asia/Manila",
+      "include_types": [
+        "Recovery"
+      ],
+      "drop_in_cad": 24,
+      "price_per_visit_cad": [
+        17,
+        24
+      ],
+      "note": "Gym in a surf town; Recovery Session ₱1,000 and class + recovery passes ₱1,200. 'Self Train and Recover' gym slots not counted. CAD at about 0.024 per PHP."
+    },
+    {
+      "id": "one-flow",
+      "name": "One Flow",
+      "city": "Cape Town, South Africa (Green Point)",
+      "website": "https://www.oneflow.co.za/book",
+      "platform": "Mindbody",
+      "track": "later",
+      "reason": "Mindbody's branded schedule widget includes places booked in its page; needs an HTML reader. Its sauna capacities (10–32) look set to class-room size, so the numbers would read low.",
+      "note": "Guided Sauna Journeys, self-paced sauna + plunge, sober sauna raves. On 9 Nov: unguided sauna 2 of 668 places booked, guided 4 of 102."
+    },
+    {
+      "id": "dii-sauna",
+      "name": "Dii Sauna & Icebath",
+      "city": "Ho Chi Minh City, Vietnam (375/9 Hoàng Sa)",
+      "website": "https://diisauna.punchpass.com",
+      "platform": "Punchpass",
+      "track": "cannot",
+      "reason": "Punchpass shows the schedule but not places left.",
+      "note": "'Saigon's first Finnish sauna'. 2-hour slots 9:00–19:00; ₫600k single (~US$23), about US$20 a visit in packs."
+    },
+    {
+      "id": "sauna-space-medellin",
+      "name": "Sauna Space",
+      "city": "Medellín, Colombia (Provenza, Cra. 34 #8a-15)",
+      "website": "https://saunaspacewellness.com/en",
+      "platform": "Custom",
+      "track": "cannot",
+      "reason": "Custom booking site; nothing about places is public.",
+      "note": "Rooftop Finnish sauna and 2 plunges, 2-hour free flow. COP 100k single, 65k in a 10-pack, founders COP 375k/month. Google 5.0 from 331 reviews."
+    },
+    {
+      "id": "nordflo",
+      "name": "NordFlō (also KASA, Tērmique)",
+      "city": "Mexico City (Juárez)",
+      "website": "https://nordflo.mx/reservar",
+      "platform": "Ollynk",
+      "track": "later",
+      "reason": "Ollynk's schedule API needs a key taken from each studio's page; not used.",
+      "note": "Day pass MXN 350 (~US$19), unlimited MXN 2,200/month, membership capped at 30."
     }
   ]
 }

@@ -1,6 +1,6 @@
 """Save how full each studio's upcoming sessions are.
 
-Run every 30 minutes. For each studio with a public Mariana Tek, Ferb or Momence schedule it reads the
+Run every 30 minutes. For each studio with a public schedule (Mariana Tek, Ferb, Momence, Wix Bookings, Rezerv or a studio's own site) it reads the
 next few days of sessions and keeps the latest reading of each session taken before
 it starts. Booking systems wipe the numbers once a session starts, so the last
 reading before the start is the closest we get to how many people came.
@@ -134,7 +134,116 @@ def fetch_bastu(types, start, end):
     return out
 
 
-READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb, "momence": fetch_momence, "bastu": fetch_bastu}
+def _get_json(url, headers=None, body=None):
+    req = urllib.request.Request(url, headers={**HEADERS, **(headers or {})},
+                                 data=json.dumps(body).encode() if body is not None else None)
+    if body is not None:
+        req.add_header("Content-Type", "application/json")
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def _session(sid, start_utc, cap, left, loc, tz, kind, status=""):
+    return {"id": sid, "start_datetime": start_utc, "capacity": cap, "available_spot_count": left,
+            "is_cancelled": False, "status": status, "location": {"name": loc, "timezone": tz},
+            "class_type": {"name": kind}}
+
+
+@functools.lru_cache(maxsize=None)
+def _saunahaus_all(_):
+    return _get_json("https://book.saunahaus.club/api/sessions")
+
+
+def fetch_saunahaus(tenant, start, end):
+    """SaunaHaüs (Cape Town) lists about 30 days of sessions with places left, in one call."""
+    out = []
+    for x in _saunahaus_all(tenant):
+        if not (start <= x["starts_at"][:10] <= end) or x.get("status") not in (None, "scheduled"):
+            continue
+        out.append(_session(x["id"], x["starts_at"][:19] + "Z", x.get("capacity") or 0, x.get("spots_available") or 0,
+                            x.get("location_name") or "", "Africa/Johannesburg", x.get("template_name") or ""))
+    return out
+
+
+@functools.lru_cache(maxsize=None)
+def _hothuts_locations(_):
+    return {o["location_id"]: o["location"] for o in _get_json("https://book.hothuts.co.za/openings/all")}
+
+
+def fetch_hothuts(tenant, start, end):
+    """Hot Huts (mobile beach saunas, South Africa): 15-minute slots per site, local times."""
+    tz = ZoneInfo("Africa/Johannesburg")
+    out = []
+    day = dt.date.fromisoformat(start)
+    while day.isoformat() <= end:
+        for loc_id, name in _hothuts_locations(tenant).items():
+            data = _get_json(f"https://book.hothuts.co.za/availability/all?location_id={loc_id}&date={day.isoformat()}")
+            for x in (data.get("data") or {}).get("all") or []:
+                local = dt.datetime.fromisoformat(f"{day.isoformat()}T{x['starts_at']}").replace(tzinfo=tz)
+                out.append(_session(x["id"], local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                    x.get("capacity") or 0, x.get("spots_left") or 0, name, "Africa/Johannesburg",
+                                    "Silent sauna" if x.get("is_silent") else "Sauna"))
+        day += dt.timedelta(days=1)
+    return out
+
+
+def fetch_rezerv(host_tz, start, end):
+    """Rezerv (RECHILL Bangkok): the public timetable API picks the studio from the site's address.
+    Times come labelled UTC but are local, so tenant = 'host|Time/Zone'."""
+    host, tz = host_tz.split("|")
+    out = []
+    day = dt.date.fromisoformat(start)
+    while day.isoformat() <= end:
+        page = 1
+        while page <= 10:
+            d = _get_json("https://customer-api.rezerv.co/v1/schedule/multi-select-filter",
+                          headers={"Origin": f"https://{host}", "Referer": f"https://{host}/timetable"},
+                          body={"selectedDate": day.isoformat(), "page": page, "countPerPage": 100})["data"]
+            for x in d.get("data") or []:
+                if x.get("isCancelled") or x["startDateTime"][:10] != day.isoformat():
+                    continue
+                local = dt.datetime.fromisoformat(f"{x['startDateTime'][:10]}T{x['startTime']}").replace(tzinfo=ZoneInfo(tz))
+                out.append(_session(x.get("scheduleClassId") or f"{x['className']}-{x['startDateTime']}-{x.get('location')}",
+                                    local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                    x.get("totalSlot") or 0, x.get("availableSlot") or 0,
+                                    str(x.get("location") or ""), tz, x.get("className") or ""))
+            if not d.get("hasNextPage"):
+                break
+            page += 1
+        day += dt.timedelta(days=1)
+    return out
+
+
+WIX_BOOKINGS_APP = "13d21c63-b5ec-5912-8397-c3a5ddb27a97"
+
+
+def fetch_wix(site_tz, start, end):
+    """Wix Bookings classes: the site's public visitor token lets its own booking page read
+    places left. tenant = 'site.domain|Time/Zone'."""
+    site, tz = site_tz.split("|")
+    inst = _get_json(f"https://{site}/_api/v1/access-tokens")["apps"][WIX_BOOKINGS_APP]["instance"]
+    to = (dt.date.fromisoformat(end) + dt.timedelta(days=1)).isoformat()
+    body = {"fromLocalDate": f"{start}T00:00:00", "toLocalDate": f"{to}T00:00:00", "timeZone": tz,
+            "includeNonBookable": True, "cursorPaging": {"limit": 100}}
+    out = []
+    for _ in range(20):
+        d = _get_json(f"https://{site}/_api/service-availability/v2/time-slots/event", headers={"Authorization": inst}, body=body)
+        for x in d.get("timeSlots") or []:
+            local = dt.datetime.fromisoformat(x["localStartDate"][:19]).replace(tzinfo=ZoneInfo(tz))
+            info = x.get("eventInfo") or {}
+            out.append(_session(info.get("eventId") or f"{x.get('serviceId')}-{x['localStartDate']}",
+                                local.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                x.get("totalCapacity") or 0, x.get("remainingCapacity") or 0,
+                                ((x.get("location") or {}).get("name") or ""), tz, info.get("eventTitle") or ""))
+        cursor = ((d.get("pagingMetadata") or {}).get("cursors") or {}).get("next")
+        if not cursor:
+            break
+        body = {"cursorPaging": {"limit": 100, "cursor": cursor}, "timeZone": tz}
+    return out
+
+
+READERS = {"marianatek": fetch_marianatek, "ferb": fetch_ferb, "momence": fetch_momence, "bastu": fetch_bastu,
+           "saunahaus": fetch_saunahaus, "hothuts": fetch_hothuts, "rezerv": fetch_rezerv, "wix": fetch_wix}
 
 # Some booking sites only say how busy a time is (e.g. MADRE: open / popular / almost_full),
 # not how many places are booked. Those go to data/slots-YYYY-MM.csv instead.

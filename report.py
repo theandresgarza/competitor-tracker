@@ -14,7 +14,7 @@ from collections import defaultdict
 from statistics import median
 from zoneinfo import ZoneInfo
 
-SESSION_TRACKERS = ("marianatek", "ferb", "momence", "bastu")  # booking systems that show places booked
+SESSION_TRACKERS = ("marianatek", "ferb", "momence", "bastu", "saunahaus", "hothuts", "rezerv", "wix")  # booking systems that show places booked
 SLOT_TRACKERS = ("madre",)  # sites that only show how busy each time is
 TRACKERS = SESSION_TRACKERS + SLOT_TRACKERS
 
@@ -50,7 +50,7 @@ def guess_tz(city):
     if any(k in c for k in ("calgary", "edmonton", "sherwood")):
         return "America/Edmonton"
     for key, zone in (("stockholm", "Europe/Stockholm"), ("london", "Europe/London"), ("barcelona", "Europe/Madrid"),
-                      ("kraków", "Europe/Warsaw"), ("mexico", "America/Mexico_City"), ("medell", "America/Bogota"), ("buenos aires", "America/Argentina/Buenos_Aires")):
+                      ("kraków", "Europe/Warsaw"), ("mexico", "America/Mexico_City"), ("medell", "America/Bogota"), ("buenos aires", "America/Argentina/Buenos_Aires"), ("cape town", "Africa/Johannesburg"), ("bangkok", "Asia/Bangkok"), ("philippines", "Asia/Manila")):
         if key in c:
             return zone
     return "America/Vancouver"
@@ -298,7 +298,7 @@ th.r, td.r {{ text-align:right; white-space:nowrap; }}
 .badge.cant, .badge.error {{ background:#fdecea; border-color:#f1b0a9; color:#9a2c22; }}
 </style></head><body><main>
 <h1>Studio tracker</h1>
-<p class="small">Sauna and cold-plunge studios in Canada, plus studios abroad to compare (Mexico, Colombia, Argentina, UK, Spain, Sweden). {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
+<p class="small">Sauna and cold-plunge studios in Canada, plus studios abroad to compare (Latin America, Europe, South Africa, Thailand, the Philippines). {tracked_n} of {len(studios)} tracked automatically every 15 minutes. Last run: {esc(last_run.get('ran_at_utc', 'never'))} (UTC). {since} {esc(health)}</p>
 <p class="small">“Visits” are places booked at the last reading before each session started, usually within 15 minutes of the start. Late bookings, no-shows and walk-ins aren’t counted. Revenue = visits × the average a visit brings in, set per studio in studios.json.</p>
 
 <h2>Every studio</h2>
