@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-09T16:37:13Z",
+  "ran_at_utc": "2026-11-09T16:52:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 55
@@ -17,9 +17,6 @@
       "upcoming_sessions": 0
     },
     "tality-sherwood-park": {
-      "upcoming_sessions": 0
-    },
-    "tality-east-village": {
       "upcoming_sessions": 0
     },
     "othership": {
@@ -50,7 +47,7 @@
       "upcoming_sessions": 48
     },
     "sweattonic": {
-      "upcoming_sessions": 244
+      "upcoming_sessions": 243
     },
     "recess": {
       "upcoming_sessions": 41
@@ -63,6 +60,30 @@
     },
     "sacred-sauna-slakthuset": {
       "upcoming_sessions": 7
+    },
+    "koti-polanco": {
+      "upcoming_sessions": 70
+    },
+    "koti-condesa": {
+      "upcoming_sessions": 75
+    },
+    "koti-lomas": {
+      "upcoming_sessions": 33
+    },
+    "koti-roma": {
+      "upcoming_sessions": 75
+    },
+    "arc-canary-wharf": {
+      "upcoming_sessions": 36
+    },
+    "kold-bcn": {
+      "upcoming_sessions": 24
+    },
+    "bastu": {
+      "upcoming_sessions": 538
+    },
+    "madre-medellin": {
+      "upcoming_sessions": 151
     }
   }
 }
