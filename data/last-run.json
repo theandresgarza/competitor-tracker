@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-09T00:52:12Z",
+  "ran_at_utc": "2026-11-09T01:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-shipyards": {
-      "upcoming_sessions": 63
+      "upcoming_sessions": 62
     },
     "tality-kelowna": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "tality-squamish": {
       "upcoming_sessions": 0
@@ -20,37 +20,37 @@
       "upcoming_sessions": 0
     },
     "tality-east-village": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "othership": {
-      "upcoming_sessions": 549
+      "upcoming_sessions": 547
     },
     "kolm": {
       "upcoming_sessions": 51
     },
     "aetherhaus": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "tevah": {
-      "upcoming_sessions": 87
+      "upcoming_sessions": 86
     },
     "goodsauna": {
-      "upcoming_sessions": 13
+      "upcoming_sessions": 12
     },
     "reviva": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "offline": {
-      "upcoming_sessions": 30
+      "upcoming_sessions": 29
     },
     "alter": {
-      "upcoming_sessions": 120
+      "upcoming_sessions": 118
     },
     "nrghaus": {
       "upcoming_sessions": 51
     },
     "sweattonic": {
-      "upcoming_sessions": 279
+      "upcoming_sessions": 277
     },
     "recess": {
       "upcoming_sessions": 44
