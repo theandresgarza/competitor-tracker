@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-10T10:07:12Z",
+  "ran_at_utc": "2026-11-10T10:22:15Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -80,7 +80,7 @@
       "upcoming_sessions": 23
     },
     "bastu": {
-      "upcoming_sessions": 610
+      "upcoming_sessions": 606
     },
     "hot-huts": {
       "upcoming_sessions": 256
@@ -101,7 +101,7 @@
       "upcoming_sessions": 33
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "tawhay-siargao": {
       "upcoming_sessions": 8
