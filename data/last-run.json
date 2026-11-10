@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-10T02:37:12Z",
+  "ran_at_utc": "2026-11-10T02:52:14Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 558
+      "upcoming_sessions": 554
     },
     "kolm": {
       "upcoming_sessions": 60
@@ -65,7 +65,7 @@
       "upcoming_sessions": 77
     },
     "koti-condesa": {
-      "upcoming_sessions": 81
+      "upcoming_sessions": 80
     },
     "koti-lomas": {
       "upcoming_sessions": 36
