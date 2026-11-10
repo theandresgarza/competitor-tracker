@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-10T21:52:14Z",
+  "ran_at_utc": "2026-11-10T22:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 50
+      "upcoming_sessions": 49
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 50
+      "upcoming_sessions": 49
     },
     "tality-shipyards": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 50
     },
     "tality-kelowna": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "tality-squamish": {
       "upcoming_sessions": 0
@@ -29,7 +29,7 @@
       "upcoming_sessions": 26
     },
     "tevah": {
-      "upcoming_sessions": 71
+      "upcoming_sessions": 70
     },
     "goodsauna": {
       "upcoming_sessions": 14
@@ -38,10 +38,10 @@
       "upcoming_sessions": 29
     },
     "offline": {
-      "upcoming_sessions": 26
+      "upcoming_sessions": 25
     },
     "alter": {
-      "upcoming_sessions": 114
+      "upcoming_sessions": 113
     },
     "nrghaus": {
       "upcoming_sessions": 47
@@ -62,7 +62,7 @@
       "upcoming_sessions": 6
     },
     "koti-polanco": {
-      "upcoming_sessions": 65
+      "upcoming_sessions": 64
     },
     "koti-condesa": {
       "upcoming_sessions": 67
@@ -71,7 +71,7 @@
       "upcoming_sessions": 30
     },
     "koti-roma": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 33
@@ -80,7 +80,7 @@
       "upcoming_sessions": 18
     },
     "bastu": {
-      "upcoming_sessions": 486
+      "upcoming_sessions": 484
     },
     "hot-huts": {
       "upcoming_sessions": 257
@@ -101,13 +101,13 @@
       "upcoming_sessions": 31
     },
     "summit-recovery-cebu": {
-      "error": "<urlopen error [Errno -2] Name or service not known>"
+      "upcoming_sessions": 33
     },
     "tawhay-siargao": {
       "upcoming_sessions": 8
     },
     "madre-medellin": {
-      "upcoming_sessions": 131
+      "upcoming_sessions": 130
     }
   }
 }
