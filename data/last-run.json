@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-10T07:37:14Z",
+  "ran_at_utc": "2026-11-10T07:52:14Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -86,7 +86,7 @@
       "upcoming_sessions": 256
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "soma-sauna": {
       "upcoming_sessions": 28
@@ -101,7 +101,7 @@
       "upcoming_sessions": 35
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "tawhay-siargao": {
       "upcoming_sessions": 8
