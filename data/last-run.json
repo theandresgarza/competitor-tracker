@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-10T00:52:12Z",
+  "ran_at_utc": "2026-11-10T01:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-shipyards": {
-      "upcoming_sessions": 65
+      "upcoming_sessions": 64
     },
     "tality-kelowna": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "tality-squamish": {
       "upcoming_sessions": 0
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 586
+      "upcoming_sessions": 582
     },
     "kolm": {
       "upcoming_sessions": 61
@@ -29,7 +29,7 @@
       "upcoming_sessions": 32
     },
     "tevah": {
-      "upcoming_sessions": 87
+      "upcoming_sessions": 86
     },
     "goodsauna": {
       "upcoming_sessions": 14
@@ -41,10 +41,10 @@
       "upcoming_sessions": 34
     },
     "alter": {
-      "upcoming_sessions": 134
+      "upcoming_sessions": 132
     },
     "nrghaus": {
-      "upcoming_sessions": 55
+      "upcoming_sessions": 54
     },
     "sweattonic": {
       "upcoming_sessions": 316
@@ -62,7 +62,7 @@
       "upcoming_sessions": 8
     },
     "koti-polanco": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "koti-condesa": {
       "upcoming_sessions": 83
@@ -71,7 +71,7 @@
       "upcoming_sessions": 37
     },
     "koti-roma": {
-      "upcoming_sessions": 83
+      "upcoming_sessions": 82
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 44
@@ -92,10 +92,10 @@
       "upcoming_sessions": 28
     },
     "rechill-asok": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "longevity-labs": {
       "upcoming_sessions": 41
@@ -107,7 +107,7 @@
       "upcoming_sessions": 11
     },
     "madre-medellin": {
-      "upcoming_sessions": 122
+      "upcoming_sessions": 121
     }
   }
 }
