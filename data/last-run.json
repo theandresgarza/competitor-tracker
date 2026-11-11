@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T09:37:12Z",
+  "ran_at_utc": "2026-11-11T09:52:14Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -56,10 +56,10 @@
       "upcoming_sessions": 33
     },
     "sacred-sauna-mood": {
-      "error": "The read operation timed out"
+      "upcoming_sessions": 15
     },
     "sacred-sauna-slakthuset": {
-      "error": "The read operation timed out"
+      "upcoming_sessions": 11
     },
     "koti-polanco": {
       "upcoming_sessions": 73
@@ -74,7 +74,7 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "kold-bcn": {
       "upcoming_sessions": 26
