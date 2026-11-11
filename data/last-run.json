@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-11T17:52:13Z",
+  "ran_at_utc": "2026-11-11T18:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 54
+      "upcoming_sessions": 53
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 56
+      "upcoming_sessions": 55
     },
     "tality-shipyards": {
-      "upcoming_sessions": 57
+      "upcoming_sessions": 56
     },
     "tality-kelowna": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-squamish": {
       "upcoming_sessions": 12
@@ -23,13 +23,13 @@
       "upcoming_sessions": 579
     },
     "kolm": {
-      "upcoming_sessions": 65
+      "upcoming_sessions": 63
     },
     "aetherhaus": {
       "upcoming_sessions": 28
     },
     "tevah": {
-      "upcoming_sessions": 79
+      "upcoming_sessions": 78
     },
     "goodsauna": {
       "upcoming_sessions": 17
@@ -47,13 +47,13 @@
       "upcoming_sessions": 57
     },
     "sweattonic": {
-      "upcoming_sessions": 278
+      "upcoming_sessions": 276
     },
     "recess": {
       "upcoming_sessions": 36
     },
     "joy": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 12
@@ -62,31 +62,31 @@
       "upcoming_sessions": 9
     },
     "koti-polanco": {
-      "upcoming_sessions": 66
+      "upcoming_sessions": 65
     },
     "koti-condesa": {
       "upcoming_sessions": 71
     },
     "koti-lomas": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "koti-roma": {
-      "upcoming_sessions": 74
+      "upcoming_sessions": 73
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 34
     },
     "kold-bcn": {
-      "upcoming_sessions": 23
+      "upcoming_sessions": 22
     },
     "bastu": {
-      "upcoming_sessions": 507
+      "upcoming_sessions": 505
     },
     "hot-huts": {
       "upcoming_sessions": 310
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "soma-sauna": {
       "upcoming_sessions": 25
@@ -107,7 +107,7 @@
       "upcoming_sessions": 6
     },
     "madre-medellin": {
-      "upcoming_sessions": 155
+      "upcoming_sessions": 154
     }
   }
 }
