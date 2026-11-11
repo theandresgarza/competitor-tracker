@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T06:22:14Z",
+  "ran_at_utc": "2026-11-11T06:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -77,7 +77,7 @@
       "upcoming_sessions": 43
     },
     "kold-bcn": {
-      "upcoming_sessions": 26
+      "error": "HTTP Error 502: Bad Gateway"
     },
     "bastu": {
       "upcoming_sessions": 591
@@ -101,7 +101,7 @@
       "upcoming_sessions": 36
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "tawhay-siargao": {
       "upcoming_sessions": 11
