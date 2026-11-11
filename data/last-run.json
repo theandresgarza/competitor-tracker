@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T20:07:13Z",
+  "ran_at_utc": "2026-11-11T20:58:43Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 51
@@ -20,40 +20,40 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 551
+      "upcoming_sessions": 539
     },
     "kolm": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "aetherhaus": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "tevah": {
-      "upcoming_sessions": 76
+      "upcoming_sessions": 75
     },
     "goodsauna": {
       "upcoming_sessions": 16
     },
     "reviva": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "offline": {
       "upcoming_sessions": 33
     },
     "alter": {
-      "upcoming_sessions": 132
+      "upcoming_sessions": 130
     },
     "nrghaus": {
-      "upcoming_sessions": 56
+      "upcoming_sessions": 55
     },
     "sweattonic": {
-      "upcoming_sessions": 268
+      "upcoming_sessions": 264
     },
     "recess": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "joy": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 12
@@ -65,22 +65,22 @@
       "upcoming_sessions": 63
     },
     "koti-condesa": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "koti-lomas": {
       "upcoming_sessions": 30
     },
     "koti-roma": {
-      "upcoming_sessions": 70
+      "upcoming_sessions": 69
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 33
+      "upcoming_sessions": 32
     },
     "kold-bcn": {
       "upcoming_sessions": 21
     },
     "bastu": {
-      "upcoming_sessions": 484
+      "upcoming_sessions": 475
     },
     "hot-huts": {
       "upcoming_sessions": 310
@@ -107,7 +107,7 @@
       "upcoming_sessions": 6
     },
     "madre-medellin": {
-      "upcoming_sessions": 146
+      "upcoming_sessions": 143
     }
   }
 }
