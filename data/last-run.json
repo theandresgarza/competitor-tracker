@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T13:52:12Z",
+  "ran_at_utc": "2026-11-11T14:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 617
+      "upcoming_sessions": 613
     },
     "kolm": {
       "upcoming_sessions": 67
@@ -29,7 +29,7 @@
       "upcoming_sessions": 29
     },
     "tevah": {
-      "upcoming_sessions": 84
+      "upcoming_sessions": 83
     },
     "goodsauna": {
       "upcoming_sessions": 17
@@ -41,19 +41,19 @@
       "upcoming_sessions": 33
     },
     "alter": {
-      "upcoming_sessions": 140
+      "upcoming_sessions": 138
     },
     "nrghaus": {
       "upcoming_sessions": 57
     },
     "sweattonic": {
-      "upcoming_sessions": 300
+      "upcoming_sessions": 298
     },
     "recess": {
       "upcoming_sessions": 38
     },
     "joy": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 14
@@ -62,16 +62,16 @@
       "upcoming_sessions": 11
     },
     "koti-polanco": {
-      "upcoming_sessions": 71
+      "upcoming_sessions": 70
     },
     "koti-condesa": {
-      "upcoming_sessions": 77
+      "upcoming_sessions": 76
     },
     "koti-lomas": {
       "upcoming_sessions": 34
     },
     "koti-roma": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 38
@@ -80,16 +80,16 @@
       "upcoming_sessions": 26
     },
     "bastu": {
-      "upcoming_sessions": 549
+      "upcoming_sessions": 547
     },
     "hot-huts": {
-      "upcoming_sessions": 316
+      "upcoming_sessions": 314
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 37
     },
     "soma-sauna": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "rechill-asok": {
       "upcoming_sessions": 38
@@ -101,7 +101,7 @@
       "upcoming_sessions": 31
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "tawhay-siargao": {
       "upcoming_sessions": 6
