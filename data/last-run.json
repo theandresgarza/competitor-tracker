@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T07:22:13Z",
+  "ran_at_utc": "2026-11-11T07:37:15Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -74,7 +74,7 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 43
+      "upcoming_sessions": 42
     },
     "kold-bcn": {
       "upcoming_sessions": 26
@@ -86,7 +86,7 @@
       "upcoming_sessions": 328
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "soma-sauna": {
       "upcoming_sessions": 32
@@ -98,7 +98,7 @@
       "upcoming_sessions": 43
     },
     "longevity-labs": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 41
