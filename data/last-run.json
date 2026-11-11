@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-11T11:37:13Z",
+  "ran_at_utc": "2026-11-11T11:52:15Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -47,7 +47,7 @@
       "upcoming_sessions": 57
     },
     "sweattonic": {
-      "upcoming_sessions": 313
+      "upcoming_sessions": 312
     },
     "recess": {
       "upcoming_sessions": 38
@@ -80,7 +80,7 @@
       "upcoming_sessions": 26
     },
     "bastu": {
-      "upcoming_sessions": 573
+      "upcoming_sessions": 570
     },
     "hot-huts": {
       "upcoming_sessions": 328
