@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T07:22:12Z",
+  "ran_at_utc": "2026-11-12T07:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -74,7 +74,7 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 43
+      "upcoming_sessions": 42
     },
     "kold-bcn": {
       "upcoming_sessions": 31
@@ -98,7 +98,7 @@
       "upcoming_sessions": 39
     },
     "longevity-labs": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 43
