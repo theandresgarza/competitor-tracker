@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T18:07:12Z",
+  "ran_at_utc": "2026-11-12T18:37:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 55
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 571
+      "upcoming_sessions": 566
     },
     "kolm": {
       "upcoming_sessions": 62
@@ -47,7 +47,7 @@
       "upcoming_sessions": 61
     },
     "sweattonic": {
-      "upcoming_sessions": 276
+      "upcoming_sessions": 273
     },
     "recess": {
       "upcoming_sessions": 33
@@ -65,13 +65,13 @@
       "upcoming_sessions": 62
     },
     "koti-condesa": {
-      "upcoming_sessions": 69
+      "upcoming_sessions": 68
     },
     "koti-lomas": {
       "upcoming_sessions": 30
     },
     "koti-roma": {
-      "upcoming_sessions": 73
+      "upcoming_sessions": 72
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 34
@@ -80,13 +80,13 @@
       "upcoming_sessions": 25
     },
     "bastu": {
-      "upcoming_sessions": 484
+      "upcoming_sessions": 479
     },
     "hot-huts": {
       "upcoming_sessions": 364
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "soma-sauna": {
       "upcoming_sessions": 29
@@ -107,7 +107,7 @@
       "upcoming_sessions": 5
     },
     "madre-medellin": {
-      "upcoming_sessions": 155
+      "upcoming_sessions": 153
     }
   }
 }
