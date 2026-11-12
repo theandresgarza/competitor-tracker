@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T10:07:12Z",
+  "ran_at_utc": "2026-11-12T10:22:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -80,10 +80,10 @@
       "upcoming_sessions": 29
     },
     "bastu": {
-      "upcoming_sessions": 568
+      "upcoming_sessions": 564
     },
     "hot-huts": {
-      "upcoming_sessions": 392
+      "upcoming_sessions": 369
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 39
@@ -101,7 +101,7 @@
       "upcoming_sessions": 34
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "tawhay-siargao": {
       "upcoming_sessions": 5
