@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-12T02:52:14Z",
+  "ran_at_utc": "2026-11-12T03:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-shipyards": {
-      "upcoming_sessions": 63
+      "upcoming_sessions": 62
     },
     "tality-kelowna": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "tality-squamish": {
       "upcoming_sessions": 25
@@ -29,10 +29,10 @@
       "upcoming_sessions": 30
     },
     "tevah": {
-      "upcoming_sessions": 85
+      "upcoming_sessions": 84
     },
     "goodsauna": {
-      "upcoming_sessions": 19
+      "upcoming_sessions": 18
     },
     "reviva": {
       "upcoming_sessions": 38
@@ -62,7 +62,7 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 71
+      "upcoming_sessions": 70
     },
     "koti-condesa": {
       "upcoming_sessions": 76
@@ -83,7 +83,7 @@
       "upcoming_sessions": 570
     },
     "hot-huts": {
-      "upcoming_sessions": 431
+      "upcoming_sessions": 427
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 43
@@ -92,16 +92,16 @@
       "upcoming_sessions": 36
     },
     "rechill-asok": {
-      "upcoming_sessions": 48
+      "upcoming_sessions": 47
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 44
+      "upcoming_sessions": 43
     },
     "longevity-labs": {
       "upcoming_sessions": 39
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "tawhay-siargao": {
       "upcoming_sessions": 6
