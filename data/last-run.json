@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T20:22:14Z",
+  "ran_at_utc": "2026-11-12T20:37:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 53
@@ -20,16 +20,16 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 545
+      "upcoming_sessions": 542
     },
     "kolm": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "aetherhaus": {
       "upcoming_sessions": 26
     },
     "tevah": {
-      "upcoming_sessions": 74
+      "upcoming_sessions": 73
     },
     "goodsauna": {
       "upcoming_sessions": 18
@@ -41,16 +41,16 @@
       "upcoming_sessions": 38
     },
     "alter": {
-      "upcoming_sessions": 146
+      "upcoming_sessions": 144
     },
     "nrghaus": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "sweattonic": {
-      "upcoming_sessions": 263
+      "upcoming_sessions": 261
     },
     "recess": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "joy": {
       "upcoming_sessions": 28
@@ -80,7 +80,7 @@
       "upcoming_sessions": 24
     },
     "bastu": {
-      "upcoming_sessions": 459
+      "upcoming_sessions": 458
     },
     "hot-huts": {
       "upcoming_sessions": 364
@@ -107,7 +107,7 @@
       "upcoming_sessions": 5
     },
     "madre-medellin": {
-      "upcoming_sessions": 146
+      "upcoming_sessions": 145
     }
   }
 }
