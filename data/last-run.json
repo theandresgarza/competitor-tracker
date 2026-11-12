@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T03:07:12Z",
+  "ran_at_utc": "2026-11-12T03:22:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 61
@@ -23,7 +23,7 @@
       "upcoming_sessions": 633
     },
     "kolm": {
-      "upcoming_sessions": 67
+      "upcoming_sessions": 66
     },
     "aetherhaus": {
       "upcoming_sessions": 30
@@ -83,7 +83,7 @@
       "upcoming_sessions": 570
     },
     "hot-huts": {
-      "upcoming_sessions": 427
+      "upcoming_sessions": 423
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 43
