@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-12T01:07:11Z",
+  "ran_at_utc": "2026-11-12T01:22:14Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 62
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 653
+      "upcoming_sessions": 651
     },
     "kolm": {
       "upcoming_sessions": 69
@@ -98,7 +98,7 @@
       "upcoming_sessions": 45
     },
     "longevity-labs": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 48
@@ -107,7 +107,7 @@
       "upcoming_sessions": 8
     },
     "madre-medellin": {
-      "upcoming_sessions": 130
+      "upcoming_sessions": 129
     }
   }
 }
