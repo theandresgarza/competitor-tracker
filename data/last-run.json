@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-13T09:37:16Z",
+  "ran_at_utc": "2026-11-13T09:52:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -74,7 +74,7 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "kold-bcn": {
       "upcoming_sessions": 29
