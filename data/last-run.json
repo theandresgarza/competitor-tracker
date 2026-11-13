@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-13T13:22:16Z",
+  "ran_at_utc": "2026-11-13T13:37:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 603
+      "upcoming_sessions": 600
     },
     "kolm": {
       "upcoming_sessions": 59
@@ -41,19 +41,19 @@
       "upcoming_sessions": 37
     },
     "alter": {
-      "upcoming_sessions": 158
+      "upcoming_sessions": 156
     },
     "nrghaus": {
       "upcoming_sessions": 65
     },
     "sweattonic": {
-      "upcoming_sessions": 219
+      "upcoming_sessions": 217
     },
     "recess": {
       "upcoming_sessions": 35
     },
     "joy": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 13
@@ -62,13 +62,13 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 69
+      "upcoming_sessions": 68
     },
     "koti-condesa": {
-      "upcoming_sessions": 76
+      "upcoming_sessions": 75
     },
     "koti-lomas": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "koti-roma": {
       "upcoming_sessions": 80
@@ -80,13 +80,13 @@
       "upcoming_sessions": 29
     },
     "bastu": {
-      "upcoming_sessions": 533
+      "upcoming_sessions": 531
     },
     "hot-huts": {
       "upcoming_sessions": 302
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 33
+      "upcoming_sessions": 32
     },
     "soma-sauna": {
       "upcoming_sessions": 25
