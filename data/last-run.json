@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-13T09:52:12Z",
+  "ran_at_utc": "2026-11-13T10:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -80,7 +80,7 @@
       "upcoming_sessions": 29
     },
     "bastu": {
-      "upcoming_sessions": 570
+      "upcoming_sessions": 568
     },
     "hot-huts": {
       "upcoming_sessions": 327
@@ -89,16 +89,16 @@
       "upcoming_sessions": 36
     },
     "soma-sauna": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "rechill-asok": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 25
+      "upcoming_sessions": 24
     },
     "longevity-labs": {
-      "upcoming_sessions": 25
+      "upcoming_sessions": 24
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 41
