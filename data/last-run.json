@@ -1,17 +1,17 @@
 {
-  "ran_at_utc": "2026-11-13T21:52:14Z",
+  "ran_at_utc": "2026-11-13T22:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 52
+      "upcoming_sessions": 51
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 52
+      "upcoming_sessions": 51
     },
     "tality-shipyards": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-kelowna": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "tality-squamish": {
       "upcoming_sessions": 38
@@ -20,16 +20,16 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 535
+      "upcoming_sessions": 531
     },
     "kolm": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "aetherhaus": {
       "upcoming_sessions": 25
     },
     "tevah": {
-      "upcoming_sessions": 71
+      "upcoming_sessions": 70
     },
     "goodsauna": {
       "upcoming_sessions": 15
@@ -38,19 +38,19 @@
       "upcoming_sessions": 35
     },
     "offline": {
-      "upcoming_sessions": 33
+      "upcoming_sessions": 32
     },
     "alter": {
-      "upcoming_sessions": 124
+      "upcoming_sessions": 122
     },
     "nrghaus": {
-      "upcoming_sessions": 55
+      "upcoming_sessions": 54
     },
     "sweattonic": {
-      "upcoming_sessions": 172
+      "upcoming_sessions": 170
     },
     "recess": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "joy": {
       "upcoming_sessions": 24
@@ -62,7 +62,7 @@
       "upcoming_sessions": 13
     },
     "koti-polanco": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "koti-condesa": {
       "upcoming_sessions": 63
@@ -71,7 +71,7 @@
       "upcoming_sessions": 28
     },
     "koti-roma": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 32
@@ -80,7 +80,7 @@
       "upcoming_sessions": 24
     },
     "bastu": {
-      "upcoming_sessions": 444
+      "upcoming_sessions": 442
     },
     "hot-huts": {
       "upcoming_sessions": 279
@@ -104,7 +104,7 @@
       "upcoming_sessions": 37
     },
     "tawhay-siargao": {
-      "error": "Expecting value: line 1 column 1 (char 0)"
+      "upcoming_sessions": 8
     },
     "madre-medellin": {
       "upcoming_sessions": 139
