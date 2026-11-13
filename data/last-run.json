@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-13T01:22:13Z",
+  "ran_at_utc": "2026-11-13T01:37:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 63
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 647
+      "upcoming_sessions": 643
     },
     "kolm": {
       "upcoming_sessions": 61
@@ -44,16 +44,16 @@
       "upcoming_sessions": 160
     },
     "nrghaus": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "sweattonic": {
       "upcoming_sessions": 234
     },
     "recess": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "joy": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 14
@@ -65,10 +65,10 @@
       "upcoming_sessions": 73
     },
     "koti-condesa": {
-      "upcoming_sessions": 79
+      "upcoming_sessions": 78
     },
     "koti-lomas": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "koti-roma": {
       "upcoming_sessions": 82
@@ -107,7 +107,7 @@
       "upcoming_sessions": 9
     },
     "madre-medellin": {
-      "upcoming_sessions": 129
+      "upcoming_sessions": 128
     }
   }
 }
