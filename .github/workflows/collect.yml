@@ -21,6 +21,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          # the newest commit, not the one that started the run: a late scheduled run
+          # can start after another run has already saved newer data
+          ref: main
       - name: Read schedules
         run: python3 collect.py
       - name: Rebuild the view
@@ -36,6 +40,15 @@ jobs:
             echo "Nothing new"
           else
             git commit -m "Schedules $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase
-            git push
+            # if another run saved data in the meantime, start from its data and read again
+            for try in 1 2 3; do
+              if git pull --rebase && git push; then exit 0; fi
+              git rebase --abort 2>/dev/null || true
+              git fetch origin main && git reset --hard origin/main
+              python3 collect.py && python3 report.py || true
+              git add data view
+              git diff --cached --quiet && exit 0
+              git commit -m "Schedules $(date -u +%Y-%m-%dT%H:%MZ)"
+            done
+            exit 1
           fi

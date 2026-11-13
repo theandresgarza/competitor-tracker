@@ -275,7 +275,7 @@ def collect_slots(studios, now, days, run):
         days = [(today + dt.timedelta(days=d)).isoformat() for d in range(DAYS_AHEAD + 1)]
         try:
             slots = [x for d in days for x in reader(d)]
-        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+        except Exception as e:
             run["studios"][s["id"]] = {"error": str(e)[:200]}
             continue
         months = {}
@@ -361,7 +361,7 @@ def main():
         platform, tenant, day = job
         try:
             return READERS[platform](tenant, day, day)
-        except (urllib.error.URLError, TimeoutError, ValueError) as e:
+        except Exception as e:  # one site failing (dropped connection, odd reply) must not stop the run
             return e
 
     # one request per booking system and day (shared by its locations), all at once to keep runs
