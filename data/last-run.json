@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-14T21:37:12Z",
+  "ran_at_utc": "2026-11-14T21:52:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 52
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 523
+      "upcoming_sessions": 519
     },
     "kolm": {
       "upcoming_sessions": 40
@@ -47,7 +47,7 @@
       "upcoming_sessions": 50
     },
     "sweattonic": {
-      "upcoming_sessions": 170
+      "upcoming_sessions": 169
     },
     "recess": {
       "upcoming_sessions": 30
@@ -80,7 +80,7 @@
       "upcoming_sessions": 24
     },
     "bastu": {
-      "upcoming_sessions": 458
+      "upcoming_sessions": 454
     },
     "hot-huts": {
       "upcoming_sessions": 170
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 141
+      "upcoming_sessions": 140
     }
   }
 }
