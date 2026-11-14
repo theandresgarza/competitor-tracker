@@ -1,29 +1,29 @@
 {
-  "ran_at_utc": "2026-11-14T22:52:12Z",
+  "ran_at_utc": "2026-11-14T23:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 50
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 49
-    },
-    "tality-shipyards": {
-      "upcoming_sessions": 53
-    },
-    "tality-kelowna": {
       "upcoming_sessions": 48
     },
+    "tality-shipyards": {
+      "upcoming_sessions": 52
+    },
+    "tality-kelowna": {
+      "upcoming_sessions": 47
+    },
     "tality-squamish": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 503
+      "upcoming_sessions": 499
     },
     "kolm": {
-      "upcoming_sessions": 38
+      "upcoming_sessions": 37
     },
     "aetherhaus": {
       "upcoming_sessions": 25
@@ -32,22 +32,22 @@
       "upcoming_sessions": 67
     },
     "goodsauna": {
-      "upcoming_sessions": 12
+      "upcoming_sessions": 11
     },
     "reviva": {
       "upcoming_sessions": 33
     },
     "offline": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "alter": {
-      "upcoming_sessions": 112
+      "upcoming_sessions": 110
     },
     "nrghaus": {
       "upcoming_sessions": 48
     },
     "sweattonic": {
-      "upcoming_sessions": 163
+      "upcoming_sessions": 161
     },
     "recess": {
       "upcoming_sessions": 29
@@ -62,10 +62,10 @@
       "upcoming_sessions": 10
     },
     "koti-polanco": {
-      "upcoming_sessions": 61
+      "upcoming_sessions": 60
     },
     "koti-condesa": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 63
     },
     "koti-lomas": {
       "upcoming_sessions": 28
@@ -80,7 +80,7 @@
       "upcoming_sessions": 24
     },
     "bastu": {
-      "upcoming_sessions": 444
+      "upcoming_sessions": 442
     },
     "hot-huts": {
       "upcoming_sessions": 170
@@ -101,13 +101,13 @@
       "upcoming_sessions": 22
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "tawhay-siargao": {
-      "upcoming_sessions": 13
+      "upcoming_sessions": 12
     },
     "madre-medellin": {
-      "upcoming_sessions": 136
+      "upcoming_sessions": 135
     }
   }
 }
