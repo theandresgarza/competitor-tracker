@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-14T12:52:12Z",
+  "ran_at_utc": "2026-11-14T13:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 615
+      "upcoming_sessions": 611
     },
     "kolm": {
       "upcoming_sessions": 45
@@ -41,13 +41,13 @@
       "upcoming_sessions": 40
     },
     "alter": {
-      "upcoming_sessions": 140
+      "upcoming_sessions": 138
     },
     "nrghaus": {
       "upcoming_sessions": 58
     },
     "sweattonic": {
-      "upcoming_sessions": 222
+      "upcoming_sessions": 220
     },
     "recess": {
       "upcoming_sessions": 34
@@ -56,7 +56,7 @@
       "upcoming_sessions": 28
     },
     "sacred-sauna-mood": {
-      "upcoming_sessions": 11
+      "upcoming_sessions": 10
     },
     "sacred-sauna-slakthuset": {
       "upcoming_sessions": 12
@@ -74,28 +74,28 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 40
+      "upcoming_sessions": 39
     },
     "kold-bcn": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "bastu": {
-      "upcoming_sessions": 549
+      "upcoming_sessions": 547
     },
     "hot-huts": {
-      "upcoming_sessions": 188
+      "upcoming_sessions": 185
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 34
     },
     "soma-sauna": {
-      "upcoming_sessions": 22
+      "upcoming_sessions": 21
     },
     "rechill-asok": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 21
+      "upcoming_sessions": 20
     },
     "longevity-labs": {
       "upcoming_sessions": 22
