@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-14T16:52:12Z",
+  "ran_at_utc": "2026-11-14T16:59:24Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 57
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 160
+      "upcoming_sessions": 159
     }
   }
 }
