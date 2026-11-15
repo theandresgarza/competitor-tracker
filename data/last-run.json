@@ -1,35 +1,35 @@
 {
-  "ran_at_utc": "2026-11-15T01:52:14Z",
+  "ran_at_utc": "2026-11-15T02:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 61
+      "upcoming_sessions": 60
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 61
+      "upcoming_sessions": 60
     },
     "tality-shipyards": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 63
     },
     "tality-kelowna": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "tality-squamish": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 611
+      "upcoming_sessions": 606
     },
     "kolm": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "aetherhaus": {
       "upcoming_sessions": 30
     },
     "tevah": {
-      "upcoming_sessions": 83
+      "upcoming_sessions": 82
     },
     "goodsauna": {
       "upcoming_sessions": 13
@@ -38,13 +38,13 @@
       "upcoming_sessions": 37
     },
     "offline": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "alter": {
       "upcoming_sessions": 121
     },
     "nrghaus": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "sweattonic": {
       "upcoming_sessions": 198
@@ -62,16 +62,16 @@
       "upcoming_sessions": 12
     },
     "koti-polanco": {
-      "upcoming_sessions": 76
+      "upcoming_sessions": 75
     },
     "koti-condesa": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "koti-lomas": {
       "upcoming_sessions": 35
     },
     "koti-roma": {
-      "upcoming_sessions": 82
+      "upcoming_sessions": 81
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 44
@@ -92,7 +92,7 @@
       "upcoming_sessions": 25
     },
     "rechill-asok": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "rechill-thonglor": {
       "upcoming_sessions": 32
@@ -107,7 +107,7 @@
       "upcoming_sessions": 14
     },
     "madre-medellin": {
-      "upcoming_sessions": 127
+      "upcoming_sessions": 126
     }
   }
 }
