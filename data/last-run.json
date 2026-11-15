@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-15T05:52:13Z",
+  "ran_at_utc": "2026-11-15T06:07:17Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -83,19 +83,19 @@
       "upcoming_sessions": 591
     },
     "hot-huts": {
-      "upcoming_sessions": 171
+      "upcoming_sessions": 165
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 40
     },
     "soma-sauna": {
-      "upcoming_sessions": 25
+      "upcoming_sessions": 24
     },
     "rechill-asok": {
-      "upcoming_sessions": 43
+      "upcoming_sessions": 42
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "longevity-labs": {
       "upcoming_sessions": 28
@@ -104,7 +104,7 @@
       "upcoming_sessions": 40
     },
     "tawhay-siargao": {
-      "upcoming_sessions": 13
+      "upcoming_sessions": 12
     },
     "madre-medellin": {
       "upcoming_sessions": 168
