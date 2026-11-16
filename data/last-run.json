@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-16T18:22:13Z",
+  "ran_at_utc": "2026-11-16T18:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 51
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 563
+      "upcoming_sessions": 559
     },
     "kolm": {
       "upcoming_sessions": 41
@@ -59,13 +59,13 @@
       "upcoming_sessions": 12
     },
     "sacred-sauna-slakthuset": {
-      "upcoming_sessions": 6
+      "upcoming_sessions": 5
     },
     "koti-polanco": {
       "upcoming_sessions": 68
     },
     "koti-condesa": {
-      "upcoming_sessions": 73
+      "upcoming_sessions": 72
     },
     "koti-lomas": {
       "upcoming_sessions": 32
@@ -80,7 +80,7 @@
       "upcoming_sessions": 22
     },
     "bastu": {
-      "upcoming_sessions": 522
+      "upcoming_sessions": 521
     },
     "hot-huts": {
       "upcoming_sessions": 137
@@ -107,7 +107,7 @@
       "upcoming_sessions": 11
     },
     "madre-medellin": {
-      "upcoming_sessions": 154
+      "upcoming_sessions": 153
     }
   }
 }
