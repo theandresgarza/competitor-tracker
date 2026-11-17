@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-17T09:37:12Z",
+  "ran_at_utc": "2026-11-17T09:52:16Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 56
@@ -56,7 +56,7 @@
       "upcoming_sessions": 28
     },
     "sacred-sauna-mood": {
-      "upcoming_sessions": 15
+      "upcoming_sessions": 14
     },
     "sacred-sauna-slakthuset": {
       "upcoming_sessions": 8
@@ -74,7 +74,7 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 43
+      "upcoming_sessions": 42
     },
     "kold-bcn": {
       "upcoming_sessions": 23
@@ -83,7 +83,7 @@
       "upcoming_sessions": 612
     },
     "hot-huts": {
-      "error": "HTTP Error 522: <none>"
+      "upcoming_sessions": 245
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 39
