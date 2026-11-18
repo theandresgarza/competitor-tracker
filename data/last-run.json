@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T11:37:12Z",
+  "ran_at_utc": "2026-11-18T11:52:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 56
@@ -47,7 +47,7 @@
       "upcoming_sessions": 63
     },
     "sweattonic": {
-      "upcoming_sessions": 290
+      "upcoming_sessions": 289
     },
     "recess": {
       "upcoming_sessions": 35
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 573
+      "upcoming_sessions": 570
     },
     "hot-huts": {
       "upcoming_sessions": 308
