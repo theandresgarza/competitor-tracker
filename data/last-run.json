@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T12:52:16Z",
+  "ran_at_utc": "2026-11-18T13:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 56
@@ -38,16 +38,16 @@
       "upcoming_sessions": 33
     },
     "offline": {
-      "upcoming_sessions": 44
+      "upcoming_sessions": 43
     },
     "alter": {
-      "upcoming_sessions": 141
+      "upcoming_sessions": 140
     },
     "nrghaus": {
       "upcoming_sessions": 63
     },
     "sweattonic": {
-      "upcoming_sessions": 283
+      "upcoming_sessions": 281
     },
     "recess": {
       "upcoming_sessions": 35
@@ -62,7 +62,7 @@
       "upcoming_sessions": 11
     },
     "koti-polanco": {
-      "upcoming_sessions": 73
+      "upcoming_sessions": 72
     },
     "koti-condesa": {
       "upcoming_sessions": 78
@@ -80,16 +80,16 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 559
+      "upcoming_sessions": 557
     },
     "hot-huts": {
-      "upcoming_sessions": 302
+      "upcoming_sessions": 300
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 36
     },
     "soma-sauna": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "rechill-asok": {
       "upcoming_sessions": 38
