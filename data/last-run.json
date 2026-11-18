@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T09:52:15Z",
+  "ran_at_utc": "2026-11-18T10:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 56
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 591
+      "upcoming_sessions": 589
     },
     "hot-huts": {
       "upcoming_sessions": 308
@@ -89,16 +89,16 @@
       "upcoming_sessions": 39
     },
     "soma-sauna": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "rechill-asok": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "longevity-labs": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 39
