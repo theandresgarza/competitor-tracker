@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T08:22:13Z",
+  "ran_at_utc": "2026-11-18T08:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 56
@@ -101,10 +101,10 @@
       "upcoming_sessions": 35
     },
     "summit-recovery-cebu": {
-      "error": "The read operation timed out"
+      "upcoming_sessions": 40
     },
     "tawhay-siargao": {
-      "upcoming_sessions": 11
+      "upcoming_sessions": 10
     },
     "madre-medellin": {
       "upcoming_sessions": 168
