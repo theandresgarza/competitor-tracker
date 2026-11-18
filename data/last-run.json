@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T22:07:12Z",
+  "ran_at_utc": "2026-11-18T22:22:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 47
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 564
+      "upcoming_sessions": 560
     },
     "kolm": {
       "upcoming_sessions": 53
@@ -71,7 +71,7 @@
       "upcoming_sessions": 29
     },
     "koti-roma": {
-      "upcoming_sessions": 67
+      "upcoming_sessions": 66
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 32
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 463
+      "upcoming_sessions": 459
     },
     "hot-huts": {
       "upcoming_sessions": 290
@@ -107,7 +107,7 @@
       "upcoming_sessions": 10
     },
     "madre-medellin": {
-      "upcoming_sessions": 139
+      "upcoming_sessions": 138
     }
   }
 }
