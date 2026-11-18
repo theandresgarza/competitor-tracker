@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-18T21:37:13Z",
+  "ran_at_utc": "2026-11-18T21:52:14Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 48
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 572
+      "upcoming_sessions": 568
     },
     "kolm": {
       "upcoming_sessions": 53
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 468
+      "upcoming_sessions": 465
     },
     "hot-huts": {
       "upcoming_sessions": 290
@@ -107,7 +107,7 @@
       "upcoming_sessions": 10
     },
     "madre-medellin": {
-      "upcoming_sessions": 141
+      "upcoming_sessions": 140
     }
   }
 }
