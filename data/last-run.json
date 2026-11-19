@@ -1,20 +1,20 @@
 {
-  "ran_at_utc": "2026-11-19T22:52:12Z",
+  "ran_at_utc": "2026-11-19T23:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 49
-    },
-    "tality-kitsilano": {
-      "upcoming_sessions": 51
-    },
-    "tality-shipyards": {
-      "upcoming_sessions": 53
-    },
-    "tality-kelowna": {
       "upcoming_sessions": 48
     },
+    "tality-kitsilano": {
+      "upcoming_sessions": 50
+    },
+    "tality-shipyards": {
+      "upcoming_sessions": 52
+    },
+    "tality-kelowna": {
+      "upcoming_sessions": 47
+    },
     "tality-squamish": {
-      "upcoming_sessions": 44
+      "upcoming_sessions": 43
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
@@ -23,7 +23,7 @@
       "upcoming_sessions": 518
     },
     "kolm": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "aetherhaus": {
       "upcoming_sessions": 25
@@ -38,16 +38,16 @@
       "upcoming_sessions": 33
     },
     "offline": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "alter": {
-      "upcoming_sessions": 138
+      "upcoming_sessions": 136
     },
     "nrghaus": {
-      "upcoming_sessions": 63
+      "upcoming_sessions": 62
     },
     "sweattonic": {
-      "upcoming_sessions": 248
+      "upcoming_sessions": 246
     },
     "recess": {
       "upcoming_sessions": 24
@@ -62,10 +62,10 @@
       "upcoming_sessions": 14
     },
     "koti-polanco": {
-      "upcoming_sessions": 55
+      "upcoming_sessions": 54
     },
     "koti-condesa": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "koti-lomas": {
       "upcoming_sessions": 27
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 433
+      "upcoming_sessions": 431
     },
     "hot-huts": {
       "upcoming_sessions": 317
@@ -107,7 +107,7 @@
       "upcoming_sessions": 9
     },
     "madre-medellin": {
-      "upcoming_sessions": 136
+      "upcoming_sessions": 135
     }
   }
 }
