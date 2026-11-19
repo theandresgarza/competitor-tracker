@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-19T04:22:12Z",
+  "ran_at_utc": "2026-11-19T04:37:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -83,10 +83,10 @@
       "upcoming_sessions": 570
     },
     "hot-huts": {
-      "upcoming_sessions": 389
+      "error": "HTTP Error 522: <none>"
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "soma-sauna": {
       "upcoming_sessions": 35
