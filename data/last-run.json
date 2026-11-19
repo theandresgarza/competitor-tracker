@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-19T13:52:13Z",
+  "ran_at_utc": "2026-11-19T14:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -20,16 +20,16 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 658
+      "upcoming_sessions": 654
     },
     "kolm": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 63
     },
     "aetherhaus": {
       "upcoming_sessions": 30
     },
     "tevah": {
-      "upcoming_sessions": 86
+      "upcoming_sessions": 85
     },
     "goodsauna": {
       "upcoming_sessions": 18
@@ -41,19 +41,19 @@
       "upcoming_sessions": 42
     },
     "alter": {
-      "upcoming_sessions": 156
+      "upcoming_sessions": 154
     },
     "nrghaus": {
       "upcoming_sessions": 67
     },
     "sweattonic": {
-      "upcoming_sessions": 301
+      "upcoming_sessions": 299
     },
     "recess": {
       "upcoming_sessions": 32
     },
     "joy": {
-      "upcoming_sessions": 30
+      "upcoming_sessions": 29
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 16
@@ -62,16 +62,16 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "koti-condesa": {
-      "upcoming_sessions": 75
+      "upcoming_sessions": 74
     },
     "koti-lomas": {
       "upcoming_sessions": 33
     },
     "koti-roma": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 38
@@ -80,16 +80,16 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 528
+      "upcoming_sessions": 526
     },
     "hot-huts": {
-      "upcoming_sessions": 351
+      "upcoming_sessions": 348
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "soma-sauna": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "rechill-asok": {
       "upcoming_sessions": 38
@@ -101,7 +101,7 @@
       "upcoming_sessions": 32
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 38
+      "upcoming_sessions": 37
     },
     "tawhay-siargao": {
       "upcoming_sessions": 9
