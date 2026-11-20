@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-20T10:22:13Z",
+  "ran_at_utc": "2026-11-20T10:37:17Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -56,10 +56,10 @@
       "upcoming_sessions": 29
     },
     "sacred-sauna-mood": {
-      "upcoming_sessions": 14
+      "upcoming_sessions": 13
     },
     "sacred-sauna-slakthuset": {
-      "upcoming_sessions": 16
+      "upcoming_sessions": 15
     },
     "koti-polanco": {
       "upcoming_sessions": 67
@@ -80,13 +80,13 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 564
+      "upcoming_sessions": 563
     },
     "hot-huts": {
       "upcoming_sessions": 291
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "soma-sauna": {
       "upcoming_sessions": 27
