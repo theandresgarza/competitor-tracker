@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-21T12:07:13Z",
+  "ran_at_utc": "2026-11-21T12:22:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 60
@@ -47,7 +47,7 @@
       "upcoming_sessions": 64
     },
     "sweattonic": {
-      "upcoming_sessions": 311
+      "upcoming_sessions": 310
     },
     "recess": {
       "upcoming_sessions": 34
@@ -80,10 +80,10 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 557
+      "upcoming_sessions": 554
     },
     "hot-huts": {
-      "upcoming_sessions": 258
+      "upcoming_sessions": 255
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 34
@@ -98,13 +98,13 @@
       "upcoming_sessions": 37
     },
     "longevity-labs": {
-      "upcoming_sessions": 22
+      "error": "HTTP Error 504: Gateway Timeout"
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 37
     },
     "tawhay-siargao": {
-      "upcoming_sessions": 13
+      "error": "HTTP Error 504: Gateway Timeout"
     },
     "madre-medellin": {
       "upcoming_sessions": 168
