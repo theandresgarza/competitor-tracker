@@ -1,26 +1,26 @@
 {
-  "ran_at_utc": "2026-11-21T00:52:12Z",
+  "ran_at_utc": "2026-11-21T01:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 63
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 62
+      "upcoming_sessions": 61
     },
     "tality-shipyards": {
-      "upcoming_sessions": 67
+      "upcoming_sessions": 66
     },
     "tality-kelowna": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "tality-squamish": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 624
+      "upcoming_sessions": 621
     },
     "kolm": {
       "upcoming_sessions": 48
@@ -29,25 +29,25 @@
       "upcoming_sessions": 31
     },
     "tevah": {
-      "upcoming_sessions": 91
+      "upcoming_sessions": 90
     },
     "goodsauna": {
-      "upcoming_sessions": 17
+      "upcoming_sessions": 16
     },
     "reviva": {
       "upcoming_sessions": 41
     },
     "offline": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "alter": {
-      "upcoming_sessions": 146
+      "upcoming_sessions": 144
     },
     "nrghaus": {
-      "upcoming_sessions": 69
+      "upcoming_sessions": 68
     },
     "sweattonic": {
-      "upcoming_sessions": 315
+      "upcoming_sessions": 313
     },
     "recess": {
       "upcoming_sessions": 35
@@ -62,7 +62,7 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 71
+      "upcoming_sessions": 70
     },
     "koti-condesa": {
       "upcoming_sessions": 79
@@ -71,7 +71,7 @@
       "upcoming_sessions": 35
     },
     "koti-roma": {
-      "upcoming_sessions": 83
+      "upcoming_sessions": 82
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 43
@@ -92,10 +92,10 @@
       "upcoming_sessions": 28
     },
     "rechill-asok": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "longevity-labs": {
       "upcoming_sessions": 32
@@ -107,7 +107,7 @@
       "upcoming_sessions": 17
     },
     "madre-medellin": {
-      "upcoming_sessions": 131
+      "upcoming_sessions": 130
     }
   }
 }
