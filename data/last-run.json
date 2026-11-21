@@ -1,113 +1,113 @@
 {
-  "ran_at_utc": "2026-11-20T23:52:12Z",
+  "ran_at_utc": "2026-11-21T00:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 50
+      "upcoming_sessions": 64
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 50
+      "upcoming_sessions": 62
     },
     "tality-shipyards": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 67
     },
     "tality-kelowna": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 60
     },
     "tality-squamish": {
-      "upcoming_sessions": 45
+      "upcoming_sessions": 59
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 502
+      "upcoming_sessions": 634
     },
     "kolm": {
-      "upcoming_sessions": 43
+      "upcoming_sessions": 49
     },
     "aetherhaus": {
-      "upcoming_sessions": 24
+      "upcoming_sessions": 32
     },
     "tevah": {
-      "upcoming_sessions": 72
+      "upcoming_sessions": 92
     },
     "goodsauna": {
-      "upcoming_sessions": 14
+      "upcoming_sessions": 17
     },
     "reviva": {
-      "upcoming_sessions": 33
+      "upcoming_sessions": 41
     },
     "offline": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 42
     },
     "alter": {
-      "upcoming_sessions": 122
+      "upcoming_sessions": 148
     },
     "nrghaus": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 69
     },
     "sweattonic": {
-      "upcoming_sessions": 245
+      "upcoming_sessions": 319
     },
     "recess": {
-      "upcoming_sessions": 26
+      "upcoming_sessions": 35
     },
     "joy": {
-      "upcoming_sessions": 22
-    },
-    "sacred-sauna-mood": {
-      "upcoming_sessions": 11
-    },
-    "sacred-sauna-slakthuset": {
-      "upcoming_sessions": 13
-    },
-    "koti-polanco": {
-      "upcoming_sessions": 54
-    },
-    "koti-condesa": {
-      "upcoming_sessions": 61
-    },
-    "koti-lomas": {
       "upcoming_sessions": 27
     },
+    "sacred-sauna-mood": {
+      "upcoming_sessions": 15
+    },
+    "sacred-sauna-slakthuset": {
+      "upcoming_sessions": 15
+    },
+    "koti-polanco": {
+      "upcoming_sessions": 72
+    },
+    "koti-condesa": {
+      "upcoming_sessions": 81
+    },
+    "koti-lomas": {
+      "upcoming_sessions": 35
+    },
     "koti-roma": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 84
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 43
     },
     "kold-bcn": {
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 423
+      "upcoming_sessions": 574
     },
     "hot-huts": {
-      "upcoming_sessions": 252
+      "upcoming_sessions": 319
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 39
     },
     "soma-sauna": {
-      "upcoming_sessions": 21
+      "upcoming_sessions": 28
     },
     "rechill-asok": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 49
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 49
     },
     "longevity-labs": {
-      "upcoming_sessions": 22
+      "upcoming_sessions": 32
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 47
     },
     "tawhay-siargao": {
-      "upcoming_sessions": 12
+      "upcoming_sessions": 17
     },
     "madre-medellin": {
-      "upcoming_sessions": 135
+      "upcoming_sessions": 134
     }
   }
 }
