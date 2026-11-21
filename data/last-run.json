@@ -1,26 +1,26 @@
 {
-  "ran_at_utc": "2026-11-21T17:52:16Z",
+  "ran_at_utc": "2026-11-21T18:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 56
+      "upcoming_sessions": 55
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 54
+      "upcoming_sessions": 53
     },
     "tality-shipyards": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "tality-kelowna": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-squamish": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 568
+      "upcoming_sessions": 564
     },
     "kolm": {
       "upcoming_sessions": 43
@@ -29,7 +29,7 @@
       "upcoming_sessions": 27
     },
     "tevah": {
-      "upcoming_sessions": 79
+      "upcoming_sessions": 78
     },
     "goodsauna": {
       "upcoming_sessions": 14
@@ -38,16 +38,16 @@
       "upcoming_sessions": 36
     },
     "offline": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "alter": {
-      "upcoming_sessions": 128
+      "upcoming_sessions": 126
     },
     "nrghaus": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 59
     },
     "sweattonic": {
-      "upcoming_sessions": 278
+      "upcoming_sessions": 276
     },
     "recess": {
       "upcoming_sessions": 32
@@ -68,10 +68,10 @@
       "upcoming_sessions": 71
     },
     "koti-lomas": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "koti-roma": {
-      "upcoming_sessions": 74
+      "upcoming_sessions": 73
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 35
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 496
+      "upcoming_sessions": 494
     },
     "hot-huts": {
       "upcoming_sessions": 234
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 156
+      "upcoming_sessions": 155
     }
   }
 }
