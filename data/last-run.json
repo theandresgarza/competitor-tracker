@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-21T21:07:11Z",
+  "ran_at_utc": "2026-11-21T21:14:08Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 52
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 463
+      "upcoming_sessions": 461
     },
     "hot-huts": {
       "upcoming_sessions": 234
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 143
+      "upcoming_sessions": 142
     }
   }
 }
