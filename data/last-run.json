@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-21T15:37:11Z",
+  "ran_at_utc": "2026-11-21T15:40:45Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -71,7 +71,7 @@
       "upcoming_sessions": 33
     },
     "koti-roma": {
-      "upcoming_sessions": 77
+      "upcoming_sessions": 76
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 37
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 521
+      "upcoming_sessions": 519
     },
     "hot-huts": {
       "upcoming_sessions": 234
