@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-21T01:07:12Z",
+  "ran_at_utc": "2026-11-21T01:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 63
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 621
+      "upcoming_sessions": 615
     },
     "kolm": {
       "upcoming_sessions": 48
@@ -29,22 +29,22 @@
       "upcoming_sessions": 31
     },
     "tevah": {
-      "upcoming_sessions": 90
+      "upcoming_sessions": 89
     },
     "goodsauna": {
       "upcoming_sessions": 16
     },
     "reviva": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "offline": {
       "upcoming_sessions": 41
     },
     "alter": {
-      "upcoming_sessions": 144
+      "upcoming_sessions": 142
     },
     "nrghaus": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "sweattonic": {
       "upcoming_sessions": 313
@@ -65,10 +65,10 @@
       "upcoming_sessions": 70
     },
     "koti-condesa": {
-      "upcoming_sessions": 79
+      "upcoming_sessions": 78
     },
     "koti-lomas": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "koti-roma": {
       "upcoming_sessions": 82
@@ -98,16 +98,16 @@
       "upcoming_sessions": 48
     },
     "longevity-labs": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 46
+      "upcoming_sessions": 45
     },
     "tawhay-siargao": {
       "upcoming_sessions": 17
     },
     "madre-medellin": {
-      "upcoming_sessions": 130
+      "upcoming_sessions": 128
     }
   }
 }
