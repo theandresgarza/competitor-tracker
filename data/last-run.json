@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-22T03:22:18Z",
+  "ran_at_utc": "2026-11-22T03:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 59
@@ -29,13 +29,13 @@
       "upcoming_sessions": 29
     },
     "tevah": {
-      "upcoming_sessions": 84
+      "upcoming_sessions": 83
     },
     "goodsauna": {
       "upcoming_sessions": 12
     },
     "reviva": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "offline": {
       "upcoming_sessions": 40
