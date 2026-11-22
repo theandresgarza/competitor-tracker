@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-22T12:07:11Z",
+  "ran_at_utc": "2026-11-22T12:22:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 577
+      "upcoming_sessions": 575
     },
     "kolm": {
       "upcoming_sessions": 47
@@ -80,10 +80,10 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 578
+      "upcoming_sessions": 575
     },
     "hot-huts": {
-      "upcoming_sessions": 211
+      "upcoming_sessions": 206
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 35
