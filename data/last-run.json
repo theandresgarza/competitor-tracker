@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-22T13:52:12Z",
+  "ran_at_utc": "2026-11-22T14:07:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -29,7 +29,7 @@
       "upcoming_sessions": 28
     },
     "tevah": {
-      "upcoming_sessions": 82
+      "upcoming_sessions": 81
     },
     "goodsauna": {
       "upcoming_sessions": 12
@@ -41,13 +41,13 @@
       "upcoming_sessions": 40
     },
     "alter": {
-      "upcoming_sessions": 122
+      "upcoming_sessions": 120
     },
     "nrghaus": {
       "upcoming_sessions": 56
     },
     "sweattonic": {
-      "upcoming_sessions": 277
+      "upcoming_sessions": 275
     },
     "recess": {
       "upcoming_sessions": 37
@@ -62,7 +62,7 @@
       "upcoming_sessions": 8
     },
     "koti-polanco": {
-      "upcoming_sessions": 73
+      "upcoming_sessions": 72
     },
     "koti-condesa": {
       "upcoming_sessions": 78
@@ -71,7 +71,7 @@
       "upcoming_sessions": 35
     },
     "koti-roma": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 39
@@ -80,16 +80,16 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 559
+      "upcoming_sessions": 557
     },
     "hot-huts": {
-      "upcoming_sessions": 186
+      "upcoming_sessions": 181
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "soma-sauna": {
-      "upcoming_sessions": 17
+      "upcoming_sessions": 16
     },
     "rechill-asok": {
       "upcoming_sessions": 36
@@ -101,7 +101,7 @@
       "upcoming_sessions": 22
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "tawhay-siargao": {
       "upcoming_sessions": 12
