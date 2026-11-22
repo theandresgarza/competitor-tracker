@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-22T11:22:13Z",
+  "ran_at_utc": "2026-11-22T11:37:16Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -74,13 +74,13 @@
       "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "kold-bcn": {
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 585
+      "upcoming_sessions": 584
     },
     "hot-huts": {
       "upcoming_sessions": 216
@@ -101,7 +101,7 @@
       "upcoming_sessions": 23
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "tawhay-siargao": {
       "upcoming_sessions": 12
