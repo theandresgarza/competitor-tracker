@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-23T13:52:18Z",
+  "ran_at_utc": "2026-11-23T14:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -14,22 +14,22 @@
       "upcoming_sessions": 56
     },
     "tality-squamish": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 58
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 574
+      "upcoming_sessions": 570
     },
     "kolm": {
-      "upcoming_sessions": 44
+      "upcoming_sessions": 43
     },
     "aetherhaus": {
       "upcoming_sessions": 29
     },
     "tevah": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "goodsauna": {
       "upcoming_sessions": 9
@@ -41,13 +41,13 @@
       "upcoming_sessions": 40
     },
     "alter": {
-      "upcoming_sessions": 112
+      "upcoming_sessions": 110
     },
     "nrghaus": {
       "upcoming_sessions": 48
     },
     "sweattonic": {
-      "upcoming_sessions": 277
+      "upcoming_sessions": 275
     },
     "recess": {
       "upcoming_sessions": 39
@@ -62,16 +62,16 @@
       "upcoming_sessions": 7
     },
     "koti-polanco": {
-      "upcoming_sessions": 74
+      "upcoming_sessions": 73
     },
     "koti-condesa": {
-      "upcoming_sessions": 79
+      "upcoming_sessions": 78
     },
     "koti-lomas": {
       "upcoming_sessions": 35
     },
     "koti-roma": {
-      "upcoming_sessions": 80
+      "upcoming_sessions": 79
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 38
@@ -80,10 +80,10 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 570
+      "upcoming_sessions": 568
     },
     "hot-huts": {
-      "upcoming_sessions": 219
+      "upcoming_sessions": 211
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 35
@@ -101,7 +101,7 @@
       "upcoming_sessions": 32
     },
     "summit-recovery-cebu": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "tawhay-siargao": {
       "upcoming_sessions": 11
