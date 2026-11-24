@@ -1,26 +1,26 @@
 {
-  "ran_at_utc": "2026-11-24T14:52:14Z",
+  "ran_at_utc": "2026-11-24T15:07:18Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 58
-    },
-    "tality-kitsilano": {
       "upcoming_sessions": 56
     },
+    "tality-kitsilano": {
+      "upcoming_sessions": 54
+    },
     "tality-shipyards": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "tality-kelowna": {
       "upcoming_sessions": 56
     },
     "tality-squamish": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 606
+      "upcoming_sessions": 602
     },
     "kolm": {
       "upcoming_sessions": 54
@@ -38,19 +38,19 @@
       "upcoming_sessions": 36
     },
     "offline": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "alter": {
-      "upcoming_sessions": 124
+      "upcoming_sessions": 122
     },
     "nrghaus": {
       "upcoming_sessions": 51
     },
     "sweattonic": {
-      "upcoming_sessions": 268
+      "upcoming_sessions": 266
     },
     "recess": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "joy": {
       "upcoming_sessions": 29
@@ -62,7 +62,7 @@
       "upcoming_sessions": 8
     },
     "koti-polanco": {
-      "upcoming_sessions": 72
+      "upcoming_sessions": 71
     },
     "koti-condesa": {
       "upcoming_sessions": 77
@@ -80,16 +80,16 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 559
+      "upcoming_sessions": 557
     },
     "hot-huts": {
-      "upcoming_sessions": 382
+      "upcoming_sessions": 378
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 37
     },
     "soma-sauna": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "rechill-asok": {
       "upcoming_sessions": 37
@@ -107,7 +107,7 @@
       "upcoming_sessions": 9
     },
     "madre-medellin": {
-      "upcoming_sessions": 168
+      "upcoming_sessions": 167
     }
   }
 }
