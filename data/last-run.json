@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-24T07:52:12Z",
+  "ran_at_utc": "2026-11-24T08:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -89,13 +89,13 @@
       "upcoming_sessions": 41
     },
     "soma-sauna": {
-      "upcoming_sessions": 32
+      "error": "The read operation timed out"
     },
     "rechill-asok": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 42
+      "upcoming_sessions": 41
     },
     "longevity-labs": {
       "upcoming_sessions": 35
