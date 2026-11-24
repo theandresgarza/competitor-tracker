@@ -1,20 +1,20 @@
 {
-  "ran_at_utc": "2026-11-24T22:52:15Z",
+  "ran_at_utc": "2026-11-24T23:07:13Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 49
-    },
-    "tality-kitsilano": {
-      "upcoming_sessions": 47
-    },
-    "tality-shipyards": {
-      "upcoming_sessions": 50
-    },
-    "tality-kelowna": {
       "upcoming_sessions": 48
     },
+    "tality-kitsilano": {
+      "upcoming_sessions": 46
+    },
+    "tality-shipyards": {
+      "upcoming_sessions": 49
+    },
+    "tality-kelowna": {
+      "upcoming_sessions": 47
+    },
     "tality-squamish": {
-      "upcoming_sessions": 50
+      "upcoming_sessions": 49
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
@@ -23,7 +23,7 @@
       "upcoming_sessions": 546
     },
     "kolm": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "aetherhaus": {
       "upcoming_sessions": 25
@@ -38,16 +38,16 @@
       "upcoming_sessions": 32
     },
     "offline": {
-      "upcoming_sessions": 37
+      "upcoming_sessions": 36
     },
     "alter": {
-      "upcoming_sessions": 112
+      "upcoming_sessions": 110
     },
     "nrghaus": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "sweattonic": {
-      "upcoming_sessions": 227
+      "upcoming_sessions": 225
     },
     "recess": {
       "upcoming_sessions": 29
@@ -62,10 +62,10 @@
       "upcoming_sessions": 6
     },
     "koti-polanco": {
-      "upcoming_sessions": 64
+      "upcoming_sessions": 63
     },
     "koti-condesa": {
-      "upcoming_sessions": 66
+      "upcoming_sessions": 65
     },
     "koti-lomas": {
       "upcoming_sessions": 0
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 475
+      "upcoming_sessions": 473
     },
     "hot-huts": {
       "upcoming_sessions": 275
@@ -107,7 +107,7 @@
       "upcoming_sessions": 9
     },
     "madre-medellin": {
-      "upcoming_sessions": 136
+      "upcoming_sessions": 135
     }
   }
 }
