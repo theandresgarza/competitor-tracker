@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-25T03:42:31Z",
+  "ran_at_utc": "2026-11-25T03:52:18Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 59
@@ -23,7 +23,7 @@
       "upcoming_sessions": 669
     },
     "kolm": {
-      "upcoming_sessions": 63
+      "upcoming_sessions": 62
     },
     "aetherhaus": {
       "upcoming_sessions": 29
@@ -35,7 +35,7 @@
       "upcoming_sessions": 15
     },
     "reviva": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "offline": {
       "upcoming_sessions": 45
@@ -98,7 +98,7 @@
       "upcoming_sessions": 47
     },
     "longevity-labs": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 44
