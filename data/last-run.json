@@ -1,11 +1,11 @@
 {
-  "ran_at_utc": "2026-11-25T00:07:14Z",
+  "ran_at_utc": "2026-11-25T00:37:23Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 62
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 61
+      "upcoming_sessions": 60
     },
     "tality-shipyards": {
       "upcoming_sessions": 64
@@ -20,16 +20,16 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 713
+      "upcoming_sessions": 705
     },
     "kolm": {
       "upcoming_sessions": 65
     },
     "aetherhaus": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "tevah": {
-      "upcoming_sessions": 90
+      "upcoming_sessions": 89
     },
     "goodsauna": {
       "upcoming_sessions": 17
@@ -41,16 +41,16 @@
       "upcoming_sessions": 47
     },
     "alter": {
-      "upcoming_sessions": 148
+      "upcoming_sessions": 146
     },
     "nrghaus": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "sweattonic": {
-      "upcoming_sessions": 299
+      "upcoming_sessions": 297
     },
     "recess": {
-      "upcoming_sessions": 36
+      "upcoming_sessions": 35
     },
     "joy": {
       "upcoming_sessions": 32
@@ -62,10 +62,10 @@
       "upcoming_sessions": 11
     },
     "koti-polanco": {
-      "upcoming_sessions": 78
+      "upcoming_sessions": 77
     },
     "koti-condesa": {
-      "upcoming_sessions": 83
+      "upcoming_sessions": 81
     },
     "koti-lomas": {
       "upcoming_sessions": 0
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 595
+      "upcoming_sessions": 591
     },
     "hot-huts": {
       "upcoming_sessions": 387
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 134
+      "upcoming_sessions": 132
     }
   }
 }
