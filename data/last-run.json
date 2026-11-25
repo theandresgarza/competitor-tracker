@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-25T22:22:12Z",
+  "ran_at_utc": "2026-11-25T22:37:11Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 49
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 562
+      "upcoming_sessions": 558
     },
     "kolm": {
       "upcoming_sessions": 53
@@ -29,7 +29,7 @@
       "upcoming_sessions": 25
     },
     "tevah": {
-      "upcoming_sessions": 72
+      "upcoming_sessions": 71
     },
     "goodsauna": {
       "upcoming_sessions": 15
@@ -41,19 +41,19 @@
       "upcoming_sessions": 36
     },
     "alter": {
-      "upcoming_sessions": 125
+      "upcoming_sessions": 124
     },
     "nrghaus": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "sweattonic": {
       "upcoming_sessions": 248
     },
     "recess": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "joy": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 12
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 459
+      "upcoming_sessions": 458
     },
     "hot-huts": {
       "upcoming_sessions": 319
@@ -107,7 +107,7 @@
       "upcoming_sessions": 11
     },
     "madre-medellin": {
-      "upcoming_sessions": 138
+      "upcoming_sessions": 137
     }
   }
 }
