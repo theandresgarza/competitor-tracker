@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-25T19:22:13Z",
+  "ran_at_utc": "2026-11-25T19:37:13Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 52
@@ -20,10 +20,10 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 611
+      "upcoming_sessions": 607
     },
     "kolm": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "aetherhaus": {
       "upcoming_sessions": 26
@@ -50,16 +50,16 @@
       "upcoming_sessions": 255
     },
     "recess": {
-      "upcoming_sessions": 30
-    },
-    "joy": {
       "upcoming_sessions": 29
     },
+    "joy": {
+      "upcoming_sessions": 28
+    },
     "sacred-sauna-mood": {
-      "upcoming_sessions": 12
+      "error": "The read operation timed out"
     },
     "sacred-sauna-slakthuset": {
-      "upcoming_sessions": 9
+      "error": "The read operation timed out"
     },
     "koti-polanco": {
       "upcoming_sessions": 64
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 491
+      "upcoming_sessions": 489
     },
     "hot-huts": {
       "upcoming_sessions": 319
@@ -107,7 +107,7 @@
       "upcoming_sessions": 11
     },
     "madre-medellin": {
-      "upcoming_sessions": 150
+      "upcoming_sessions": 149
     }
   }
 }
