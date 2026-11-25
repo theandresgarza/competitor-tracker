@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-25T11:52:13Z",
+  "ran_at_utc": "2026-11-25T12:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 58
@@ -20,7 +20,7 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 669
+      "upcoming_sessions": 665
     },
     "kolm": {
       "upcoming_sessions": 62
@@ -47,7 +47,7 @@
       "upcoming_sessions": 63
     },
     "sweattonic": {
-      "upcoming_sessions": 289
+      "upcoming_sessions": 287
     },
     "recess": {
       "upcoming_sessions": 34
@@ -80,25 +80,25 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 570
+      "upcoming_sessions": 568
     },
     "hot-huts": {
-      "upcoming_sessions": 322
+      "upcoming_sessions": 320
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 36
     },
     "soma-sauna": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "rechill-asok": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "rechill-thonglor": {
-      "upcoming_sessions": 39
+      "upcoming_sessions": 38
     },
     "longevity-labs": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 37
