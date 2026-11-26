@@ -1,5 +1,5 @@
 {
-  "ran_at_utc": "2026-11-26T02:07:11Z",
+  "ran_at_utc": "2026-11-26T02:52:18Z",
   "studios": {
     "tality-mount-pleasant": {
       "upcoming_sessions": 62
@@ -20,13 +20,13 @@
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 682
+      "upcoming_sessions": 670
     },
     "kolm": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 66
     },
     "aetherhaus": {
-      "upcoming_sessions": 30
+      "upcoming_sessions": 29
     },
     "tevah": {
       "upcoming_sessions": 89
@@ -35,7 +35,7 @@
       "upcoming_sessions": 19
     },
     "reviva": {
-      "upcoming_sessions": 41
+      "upcoming_sessions": 40
     },
     "offline": {
       "upcoming_sessions": 44
@@ -44,7 +44,7 @@
       "upcoming_sessions": 158
     },
     "nrghaus": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "sweattonic": {
       "upcoming_sessions": 319
@@ -62,16 +62,16 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 72
+      "upcoming_sessions": 71
     },
     "koti-condesa": {
-      "upcoming_sessions": 77
+      "upcoming_sessions": 76
     },
     "koti-lomas": {
       "upcoming_sessions": 0
     },
     "koti-roma": {
-      "upcoming_sessions": 81
+      "upcoming_sessions": 80
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 41
@@ -83,7 +83,7 @@
       "upcoming_sessions": 570
     },
     "hot-huts": {
-      "upcoming_sessions": 469
+      "upcoming_sessions": 462
     },
     "saunahaus-cape-town": {
       "upcoming_sessions": 41
@@ -98,7 +98,7 @@
       "upcoming_sessions": 48
     },
     "longevity-labs": {
-      "upcoming_sessions": 40
+      "upcoming_sessions": 39
     },
     "summit-recovery-cebu": {
       "upcoming_sessions": 47
