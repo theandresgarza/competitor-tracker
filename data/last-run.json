@@ -1,35 +1,35 @@
 {
-  "ran_at_utc": "2026-11-27T21:52:12Z",
+  "ran_at_utc": "2026-11-27T22:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 50
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 52
+      "upcoming_sessions": 51
     },
     "tality-shipyards": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-kelowna": {
-      "upcoming_sessions": 49
+      "upcoming_sessions": 48
     },
     "tality-squamish": {
-      "upcoming_sessions": 51
+      "upcoming_sessions": 50
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 548
+      "upcoming_sessions": 544
     },
     "kolm": {
-      "upcoming_sessions": 47
+      "upcoming_sessions": 46
     },
     "aetherhaus": {
       "upcoming_sessions": 24
     },
     "tevah": {
-      "upcoming_sessions": 75
+      "upcoming_sessions": 74
     },
     "goodsauna": {
       "upcoming_sessions": 15
@@ -38,19 +38,19 @@
       "upcoming_sessions": 35
     },
     "offline": {
-      "upcoming_sessions": 34
+      "upcoming_sessions": 33
     },
     "alter": {
-      "upcoming_sessions": 124
+      "upcoming_sessions": 122
     },
     "nrghaus": {
-      "upcoming_sessions": 61
+      "upcoming_sessions": 60
     },
     "sweattonic": {
-      "upcoming_sessions": 257
+      "upcoming_sessions": 255
     },
     "recess": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "joy": {
       "upcoming_sessions": 25
@@ -62,7 +62,7 @@
       "upcoming_sessions": 13
     },
     "koti-polanco": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 58
     },
     "koti-condesa": {
       "upcoming_sessions": 63
@@ -71,7 +71,7 @@
       "upcoming_sessions": 0
     },
     "koti-roma": {
-      "upcoming_sessions": 68
+      "upcoming_sessions": 67
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 31
@@ -80,7 +80,7 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 444
+      "upcoming_sessions": 442
     },
     "hot-huts": {
       "upcoming_sessions": 300
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 140
+      "upcoming_sessions": 139
     }
   }
 }
