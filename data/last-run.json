@@ -1,26 +1,26 @@
 {
-  "ran_at_utc": "2026-11-27T17:52:13Z",
+  "ran_at_utc": "2026-11-27T18:07:12Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 55
+      "upcoming_sessions": 54
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 56
+      "upcoming_sessions": 55
     },
     "tality-shipyards": {
-      "upcoming_sessions": 57
+      "upcoming_sessions": 56
     },
     "tality-kelowna": {
-      "upcoming_sessions": 53
+      "upcoming_sessions": 52
     },
     "tality-squamish": {
-      "upcoming_sessions": 55
+      "upcoming_sessions": 54
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
     },
     "othership": {
-      "upcoming_sessions": 606
+      "upcoming_sessions": 605
     },
     "kolm": {
       "upcoming_sessions": 53
@@ -29,7 +29,7 @@
       "upcoming_sessions": 26
     },
     "tevah": {
-      "upcoming_sessions": 81
+      "upcoming_sessions": 80
     },
     "goodsauna": {
       "upcoming_sessions": 15
@@ -38,22 +38,22 @@
       "upcoming_sessions": 38
     },
     "offline": {
-      "upcoming_sessions": 35
+      "upcoming_sessions": 34
     },
     "alter": {
-      "upcoming_sessions": 140
+      "upcoming_sessions": 138
     },
     "nrghaus": {
-      "upcoming_sessions": 69
+      "upcoming_sessions": 68
     },
     "sweattonic": {
-      "upcoming_sessions": 280
+      "upcoming_sessions": 278
     },
     "recess": {
       "upcoming_sessions": 30
     },
     "joy": {
-      "upcoming_sessions": 28
+      "upcoming_sessions": 27
     },
     "sacred-sauna-mood": {
       "upcoming_sessions": 11
@@ -62,7 +62,7 @@
       "upcoming_sessions": 13
     },
     "koti-polanco": {
-      "upcoming_sessions": 63
+      "upcoming_sessions": 62
     },
     "koti-condesa": {
       "upcoming_sessions": 69
@@ -71,7 +71,7 @@
       "upcoming_sessions": 0
     },
     "koti-roma": {
-      "upcoming_sessions": 74
+      "upcoming_sessions": 73
     },
     "arc-canary-wharf": {
       "upcoming_sessions": 33
@@ -80,13 +80,13 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 486
+      "upcoming_sessions": 484
     },
     "hot-huts": {
       "upcoming_sessions": 300
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 29
+      "upcoming_sessions": 28
     },
     "soma-sauna": {
       "upcoming_sessions": 24
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 156
+      "upcoming_sessions": 155
     }
   }
 }
