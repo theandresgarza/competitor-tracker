@@ -1,11 +1,11 @@
 {
-  "ran_at_utc": "2026-11-27T14:52:14Z",
+  "ran_at_utc": "2026-11-27T15:07:17Z",
   "studios": {
     "tality-mount-pleasant": {
-      "upcoming_sessions": 59
+      "upcoming_sessions": 57
     },
     "tality-kitsilano": {
-      "upcoming_sessions": 60
+      "upcoming_sessions": 58
     },
     "tality-shipyards": {
       "upcoming_sessions": 60
@@ -14,7 +14,7 @@
       "upcoming_sessions": 56
     },
     "tality-squamish": {
-      "upcoming_sessions": 58
+      "upcoming_sessions": 57
     },
     "tality-sherwood-park": {
       "upcoming_sessions": 0
@@ -38,19 +38,19 @@
       "upcoming_sessions": 38
     },
     "offline": {
-      "upcoming_sessions": 38
+      "upcoming_sessions": 37
     },
     "alter": {
-      "upcoming_sessions": 152
+      "upcoming_sessions": 150
     },
     "nrghaus": {
       "upcoming_sessions": 71
     },
     "sweattonic": {
-      "upcoming_sessions": 295
+      "upcoming_sessions": 293
     },
     "recess": {
-      "upcoming_sessions": 32
+      "upcoming_sessions": 31
     },
     "joy": {
       "upcoming_sessions": 29
@@ -62,7 +62,7 @@
       "upcoming_sessions": 15
     },
     "koti-polanco": {
-      "upcoming_sessions": 66
+      "upcoming_sessions": 65
     },
     "koti-condesa": {
       "upcoming_sessions": 73
@@ -80,16 +80,16 @@
       "error": "HTTP Error 400: Bad Request"
     },
     "bastu": {
-      "upcoming_sessions": 517
+      "upcoming_sessions": 515
     },
     "hot-huts": {
-      "upcoming_sessions": 304
+      "upcoming_sessions": 302
     },
     "saunahaus-cape-town": {
-      "upcoming_sessions": 31
+      "upcoming_sessions": 30
     },
     "soma-sauna": {
-      "upcoming_sessions": 27
+      "upcoming_sessions": 26
     },
     "rechill-asok": {
       "upcoming_sessions": 37
@@ -107,7 +107,7 @@
       "upcoming_sessions": 13
     },
     "madre-medellin": {
-      "upcoming_sessions": 168
+      "upcoming_sessions": 167
     }
   }
 }
